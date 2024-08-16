@@ -32,19 +32,19 @@ def test_stationarity(data):
     print(f'Critical Values: {result[4]}')
 
 
-def plot_acf(data, save_path_acf):
+def save_acf_img(data, save_path_acf):
     # Plotar ACF
     plt.figure(figsize=(12, 6))
-    plot_acf(data, ax=plt.gca())
+    plot_acf(data, lags=40)  # Adjust lags as needed
     plt.title('ACF')
     plt.savefig(save_path_acf, format='png')
     plt.close()
 
 
-def plot_pacf(data, save_path_pacf):
+def save_pacf_img(data, save_path_pacf):
     # Plotar PACF
     plt.figure(figsize=(12, 6))
-    plot_pacf(data, ax=plt.gca())
+    plot_pacf(data, lags=40)  # Adjust lags as needed
     plt.title('PACF')
     plt.savefig(save_path_pacf, format='png')
     plt.close()
@@ -65,9 +65,9 @@ for file in files:
     print(f'Analisando o arquivo: {file}')
     data = load_data(file_path)
 
-    time_series_img = f"{file}_time_series.png"
-    acf_img = f"{file}_acf.png"
-    pacf_img = f"{file}_pacf.png"
+    time_series_img = os.path.join(save_folder_path, f"{file}_time_series.png")
+    acf_img = os.path.join(save_folder_path, f"{file}_acf.png")
+    pacf_img = os.path.join(save_folder_path, f"{file}_pacf.png")
 
     # Visualizar a série temporal e salvar a imagem
     plot_time_series(data, os.path.join(save_folder_path, file), time_series_img)
@@ -78,8 +78,8 @@ for file in files:
 
     # Plotar ACF e salvar a imagem
     print("Plotando ACF:")
-    plot_acf(data, acf_img)
+    save_acf_img(data, acf_img)
 
     # Plotar PACF e salvar a imagem
     print("Plotando PACF:")
-    plot_pacf(data, pacf_img)
+    save_pacf_img(data, pacf_img)
