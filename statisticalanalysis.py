@@ -6,19 +6,18 @@ from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 from statsmodels.tsa.stattools import adfuller
 import logging
 
-
 # Configuração do logging
 log_file_path = 'STATISTICALANALYSIS/LOG-STATISTICALANALYSIS.txt'
 os.makedirs(os.path.dirname(log_file_path), exist_ok=True)  # Cria o diretório se não existir
 
 logging.basicConfig(
+    filename=log_file_path,
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
-    handlers=[logging.FileHandler(log_file_path)]
+    encoding='utf-8'
 )
 
 logging.getLogger('matplotlib').setLevel(logging.ERROR)
-
 
 def load_data(file_path):
     # Carregar dados do arquivo CSV
@@ -82,18 +81,21 @@ for file in files:
     logging.info(f'Analisando o arquivo: {file}')
     data = load_data(file_path)
 
-    time_series_img = os.path.join(save_folder_path, f"{file}_time_series.png")
-    acf_img = os.path.join(save_folder_path, f"{file}_acf.png")
-    pacf_img = os.path.join(save_folder_path, f"{file}_pacf.png")
+    # Remove a extensão do arquivo CSV para criar nomes de imagens
+    base_name = os.path.splitext(file)[0]
+
+    time_series_img_path = os.path.join(save_folder_path, f"{base_name}_time_series.png")
+    acf_img_path = os.path.join(save_folder_path, f"{base_name}_acf.png")
+    pacf_img_path = os.path.join(save_folder_path, f"{base_name}_pacf.png")
 
     # Visualizar a série temporal e salvar a imagem
-    plot_time_series(data, os.path.join(save_folder_path, file), time_series_img)
+    plot_time_series(data[:150], base_name, time_series_img_path)
 
     # Testar a estacionariedade
     test_stationarity(data)
 
     # Plotar ACF e salvar a imagem
-    save_acf_img(data, acf_img)
+    save_acf_img(data, acf_img_path)
 
     # Plotar PACF e salvar a imagem
-    save_pacf_img(data, pacf_img)
+    save_pacf_img(data, pacf_img_path)
