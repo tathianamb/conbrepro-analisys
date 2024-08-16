@@ -1,5 +1,4 @@
 import os
-import sys
 import pandas as pd
 import matplotlib.pyplot as plt
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
@@ -19,11 +18,13 @@ logging.basicConfig(
 
 logging.getLogger('matplotlib').setLevel(logging.ERROR)
 
+
 def load_data(file_path):
     # Carregar dados do arquivo CSV
     logging.debug(f'Carregando dados do arquivo: {file_path}')
     data = pd.read_csv(file_path, parse_dates=[0], index_col=0, dayfirst=True)
     return data
+
 
 def plot_time_series(data, title, save_path):
     # Plotar a série temporal
@@ -38,13 +39,13 @@ def plot_time_series(data, title, save_path):
     plt.savefig(save_path, format='png')
     plt.close()
 
+
 def test_stationarity(data):
     # Testar a estacionariedade usando o teste de Dickey-Fuller
     logging.debug('Realizando o teste de estacionariedade (Dickey-Fuller)')
     result = adfuller(data)
-    logging.info(f'ADF Statistic: {result[0]}')
-    logging.info(f'p-value: {result[1]}')
-    logging.info(f'Critical Values: {result[4]}')
+    return result
+
 
 def save_acf_img(data, save_path_acf):
     # Plotar ACF
@@ -64,6 +65,37 @@ def save_pacf_img(data, save_path_pacf):
     plt.savefig(save_path_pacf, format='png')
     plt.close()
 
+
+def log_statistics(data, file_name):
+    # Calcular e registrar o resumo estatístico, quantidade de observações, datas e comparação dos valores críticos
+    logging.info(f'Quantidade de Observações: {len(data)}')
+    logging.info(f'Data de Início: {data.index.min()}')
+    logging.info(f'Data de Fim: {data.index.max()}')
+
+    # Resumo Estatístico
+    summary = data.describe()
+    indentation = '                          '
+    indented_summary = '\n'.join(f'{indentation}{line}' for line in str(summary).split('\n'))
+    logging.info(f'Descrição estatística: \n{indented_summary}')
+
+    # Testar a estacionariedade
+    adf_result = test_stationarity(data)
+    logging.info(f'ADF Statistic: {adf_result[0]}')
+    logging.info(f'p-value: {adf_result[1]}')
+    logging.info(f'Valores Críticos: {adf_result[4]}')
+
+    # Comparação com Valores Críticos
+    critical_values = adf_result[4]
+    statistic = adf_result[0]
+    for key, value in critical_values.items():
+        if statistic < value:
+            logging.info(
+                f'ADF Statistic ({statistic}) é menor que o valor crítico de {key} ({value}) - Rejeita a hipótese nula de raiz unitária - é estacionária.')
+        else:
+            logging.info(
+                f'ADF Statistic ({statistic}) é maior que o valor crítico de {key} ({value}) - Não rejeita a hipótese nula de raiz unitária - pode não ser estacionária.')
+
+
 # Caminho para os arquivos
 load_folder_path = 'DATASET2023-INPUT'
 files = [
@@ -78,7 +110,7 @@ os.makedirs(save_folder_path, exist_ok=True)  # Cria o diretório se não existi
 
 for file in files:
     file_path = os.path.join(load_folder_path, file)
-    logging.info(f'Analisando o arquivo: {file}')
+    logging.info(f'Arquivo: {file}')
     data = load_data(file_path)
 
     # Remove a extensão do arquivo CSV para criar nomes de imagens
@@ -91,8 +123,8 @@ for file in files:
     # Visualizar a série temporal e salvar a imagem
     plot_time_series(data[:150], base_name, time_series_img_path)
 
-    # Testar a estacionariedade
-    test_stationarity(data)
+    # Logar estatísticas e comparações
+    log_statistics(data, base_name)
 
     # Plotar ACF e salvar a imagem
     save_acf_img(data, acf_img_path)
