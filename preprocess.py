@@ -13,14 +13,9 @@ files = [
 ]
 
 
-# Função de pré-processamento
 def preprocess_file(file_path):
-    # Carrega o arquivo CSV pulando as primeiras 8 linhas e lendo a linha 9 como o cabeçalho
+    # Carrega o arquivo CSV pulando as primeiras 8 linhas e lendo a linha 9 como o header
     df = pd.read_csv(file_path, delimiter=';', encoding='latin1', skiprows=8)
-
-    # Substitui vírgulas por pontos na coluna de radiação global
-    if 'radiacao_global_kj/m²' in df.columns:
-        df['radiacao_global_kj/m²'] = df['radiacao_global_kj/m²'].str.replace(',', '.').astype(float)
 
     # Salva o DataFrame sem as primeiras 8 linhas (não processado)
     raw_path = os.path.join(folder_path, os.path.splitext(os.path.basename(file_path))[0] + '_no_description.csv')
@@ -32,17 +27,18 @@ def preprocess_file(file_path):
     df = df[columns_to_keep]
     df.columns = ['data', 'hora', 'radiacao_global']
 
-    # Tratamento de valores faltantes
+    # Tratamento de valores
     df = df.replace('////', pd.NA)
-    df = df.dropna()  # Ou pode-se usar df.fillna(método='ffill') para preencher
-
-    # Conversão de tipos de dados
-    df['data'] = pd.to_datetime(df['data'], format='%Y/%m/%d')
+    df['radiacao_global'] = df['radiacao_global'].str.replace(',', '.').astype(float)
+    df.fillna({'radiacao_global': 0}, inplace=True)
     df['radiacao_global'] = pd.to_numeric(df['radiacao_global'], errors='coerce')
+    df['datetime'] = pd.to_datetime(df['data'].astype(str) + ' ' + df['hora'].astype(str).str.replace(' UTC', ''), format='%Y/%m/%d %H%M')
+    df = df.drop(columns=['data', 'hora'])
+    df['datetime'] = df['datetime'].dt.strftime('%Y-%m-%d %H:%M:%S')
+    df = df.set_index('datetime')
 
-    # Salva o arquivo processado na mesma pasta
     processed_file_path = os.path.join(folder_path, os.path.splitext(os.path.basename(file_path))[0] + '_processed.csv')
-    df.to_csv(processed_file_path, index=False)
+    df.to_csv(processed_file_path, index=True)
     print(f"Arquivo processado salvo em: {processed_file_path}")
 
 
