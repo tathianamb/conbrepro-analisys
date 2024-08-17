@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 # Caminho da pasta onde os arquivos estão localizados
-folder_path = "DATASET2023"
+folder_path = "DATASET2023-INPUT"
 
 # Lista de arquivos CSV (com caminho completo)
 files = [
