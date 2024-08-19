@@ -126,3 +126,131 @@ look-up table. The actual p-value is smaller than the p-value returned.
 2024-08-17 13:16:52,284 - INFO - KPSS Statistic (6.234483581701809) é maior que o valor crítico de 5% (0.463) - Rejeita a hipótese nula de estacionaridade - pode não ser estacionária.
 2024-08-17 13:16:52,284 - INFO - KPSS Statistic (6.234483581701809) é maior que o valor crítico de 2.5% (0.574) - Rejeita a hipótese nula de estacionaridade - pode não ser estacionária.
 2024-08-17 13:16:52,284 - INFO - KPSS Statistic (6.234483581701809) é maior que o valor crítico de 1% (0.739) - Rejeita a hipótese nula de estacionaridade - pode não ser estacionária.
+2024-08-19 14:03:10,814 - INFO - Arquivo: INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_processed.csv
+2024-08-19 14:03:11,556 - INFO - Quantidade de Observações: 8760
+2024-08-19 14:03:11,556 - INFO - Data de Início: 2023-01-01 00:00:00
+2024-08-19 14:03:11,556 - INFO - Data de Fim: 2023-12-31 23:00:00
+2024-08-19 14:03:11,719 - INFO - Descrição estatística: 
+                                 radiacao_global
+                          count      8760.000000
+                          mean        804.494132
+                          std        1110.893654
+                          min           0.000000
+                          25%           0.000000
+                          50%          24.350000
+                          75%        1591.000000
+                          max        4083.900000
+2024-08-19 14:03:11,719 - INFO - Teste Dickey-Fuller
+2024-08-19 14:03:11,930 - INFO - Statistic: -9.81770320586015
+2024-08-19 14:03:11,930 - INFO - p-value: 5.441677953708796e-17
+2024-08-19 14:03:11,930 - INFO - Critical value: {'1%': -3.4310992810810093, '5%': -2.8618711323619297, '10%': -2.566946256788549}
+2024-08-19 14:03:11,930 - INFO - ADF Statistic (-9.81770320586015) é menor que o valor crítico de 1% (-3.4310992810810093) - Rejeita a hipótese nula de raiz unitária - é estacionária.
+2024-08-19 14:03:11,931 - INFO - ADF Statistic (-9.81770320586015) é menor que o valor crítico de 5% (-2.8618711323619297) - Rejeita a hipótese nula de raiz unitária - é estacionária.
+2024-08-19 14:03:11,931 - INFO - ADF Statistic (-9.81770320586015) é menor que o valor crítico de 10% (-2.566946256788549) - Rejeita a hipótese nula de raiz unitária - é estacionária.
+2024-08-19 14:03:11,931 - INFO - Teste KPSS
+2024-08-19 14:03:11,931 - WARNING - The test statistic is outside of the range of p-values available in the
+look-up table. The actual p-value is smaller than the p-value returned.
+ (Category: InterpolationWarning, File: /home/tathiana/PycharmProjects/conbrepro/statisticalanalysis.py, Line: 106)
+2024-08-19 14:03:11,931 - INFO - Statistic: 1.5480779651410996
+2024-08-19 14:03:11,931 - INFO - p-value: 0.01
+2024-08-19 14:03:11,931 - INFO - Critical value: {'10%': 0.347, '5%': 0.463, '2.5%': 0.574, '1%': 0.739}
+2024-08-19 14:03:11,931 - INFO - KPSS Statistic (1.5480779651410996) é maior que o valor crítico de 10% (0.347) - Rejeita a hipótese nula de estacionaridade - pode não ser estacionária.
+2024-08-19 14:03:11,931 - INFO - KPSS Statistic (1.5480779651410996) é maior que o valor crítico de 5% (0.463) - Rejeita a hipótese nula de estacionaridade - pode não ser estacionária.
+2024-08-19 14:03:11,931 - INFO - KPSS Statistic (1.5480779651410996) é maior que o valor crítico de 2.5% (0.574) - Rejeita a hipótese nula de estacionaridade - pode não ser estacionária.
+2024-08-19 14:03:11,931 - INFO - KPSS Statistic (1.5480779651410996) é maior que o valor crítico de 1% (0.739) - Rejeita a hipótese nula de estacionaridade - pode não ser estacionária.
+2024-08-19 14:03:11,931 - INFO - Arquivo: INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_processed.csv
+2024-08-19 14:03:12,475 - INFO - Quantidade de Observações: 8760
+2024-08-19 14:03:12,475 - INFO - Data de Início: 2023-01-01 00:00:00
+2024-08-19 14:03:12,475 - INFO - Data de Fim: 2023-12-31 23:00:00
+2024-08-19 14:03:12,478 - INFO - Descrição estatística: 
+                                 radiacao_global
+                          count      8760.000000
+                          mean        736.439384
+                          std        1055.939055
+                          min           0.000000
+                          25%           0.000000
+                          50%          22.100000
+                          75%        1408.125000
+                          max        3963.700000
+2024-08-19 14:03:12,478 - INFO - Teste Dickey-Fuller
+2024-08-19 14:03:12,653 - INFO - Statistic: -10.064266161978058
+2024-08-19 14:03:12,653 - INFO - p-value: 1.3088171818190676e-17
+2024-08-19 14:03:12,653 - INFO - Critical value: {'1%': -3.431099195237286, '5%': -2.8618710944295014, '10%': -2.566946236596859}
+2024-08-19 14:03:12,653 - INFO - ADF Statistic (-10.064266161978058) é menor que o valor crítico de 1% (-3.431099195237286) - Rejeita a hipótese nula de raiz unitária - é estacionária.
+2024-08-19 14:03:12,653 - INFO - ADF Statistic (-10.064266161978058) é menor que o valor crítico de 5% (-2.8618710944295014) - Rejeita a hipótese nula de raiz unitária - é estacionária.
+2024-08-19 14:03:12,653 - INFO - ADF Statistic (-10.064266161978058) é menor que o valor crítico de 10% (-2.566946236596859) - Rejeita a hipótese nula de raiz unitária - é estacionária.
+2024-08-19 14:03:12,653 - INFO - Teste KPSS
+2024-08-19 14:03:12,653 - WARNING - The test statistic is outside of the range of p-values available in the
+look-up table. The actual p-value is smaller than the p-value returned.
+ (Category: InterpolationWarning, File: /home/tathiana/PycharmProjects/conbrepro/statisticalanalysis.py, Line: 106)
+2024-08-19 14:03:12,653 - INFO - Statistic: 2.19659790808933
+2024-08-19 14:03:12,653 - INFO - p-value: 0.01
+2024-08-19 14:03:12,653 - INFO - Critical value: {'10%': 0.347, '5%': 0.463, '2.5%': 0.574, '1%': 0.739}
+2024-08-19 14:03:12,653 - INFO - KPSS Statistic (2.19659790808933) é maior que o valor crítico de 10% (0.347) - Rejeita a hipótese nula de estacionaridade - pode não ser estacionária.
+2024-08-19 14:03:12,653 - INFO - KPSS Statistic (2.19659790808933) é maior que o valor crítico de 5% (0.463) - Rejeita a hipótese nula de estacionaridade - pode não ser estacionária.
+2024-08-19 14:03:12,653 - INFO - KPSS Statistic (2.19659790808933) é maior que o valor crítico de 2.5% (0.574) - Rejeita a hipótese nula de estacionaridade - pode não ser estacionária.
+2024-08-19 14:03:12,653 - INFO - KPSS Statistic (2.19659790808933) é maior que o valor crítico de 1% (0.739) - Rejeita a hipótese nula de estacionaridade - pode não ser estacionária.
+2024-08-19 14:03:12,653 - INFO - Arquivo: INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_processed.csv
+2024-08-19 14:03:13,144 - INFO - Quantidade de Observações: 8760
+2024-08-19 14:03:13,144 - INFO - Data de Início: 2023-01-01 00:00:00
+2024-08-19 14:03:13,144 - INFO - Data de Fim: 2023-12-31 23:00:00
+2024-08-19 14:03:13,147 - INFO - Descrição estatística: 
+                                 radiacao_global
+                          count      8760.000000
+                          mean        667.164566
+                          std         888.622205
+                          min           0.000000
+                          25%           0.000000
+                          50%          32.700000
+                          75%        1347.100000
+                          max        3100.400000
+2024-08-19 14:03:13,147 - INFO - Teste Dickey-Fuller
+2024-08-19 14:03:13,327 - INFO - Statistic: -11.238829771296952
+2024-08-19 14:03:13,327 - INFO - p-value: 1.8285585001395733e-20
+2024-08-19 14:03:13,327 - INFO - Critical value: {'1%': -3.431099968539641, '5%': -2.86187143613454, '10%': -2.5669464184887825}
+2024-08-19 14:03:13,327 - INFO - ADF Statistic (-11.238829771296952) é menor que o valor crítico de 1% (-3.431099968539641) - Rejeita a hipótese nula de raiz unitária - é estacionária.
+2024-08-19 14:03:13,327 - INFO - ADF Statistic (-11.238829771296952) é menor que o valor crítico de 5% (-2.86187143613454) - Rejeita a hipótese nula de raiz unitária - é estacionária.
+2024-08-19 14:03:13,327 - INFO - ADF Statistic (-11.238829771296952) é menor que o valor crítico de 10% (-2.5669464184887825) - Rejeita a hipótese nula de raiz unitária - é estacionária.
+2024-08-19 14:03:13,327 - INFO - Teste KPSS
+2024-08-19 14:03:13,328 - WARNING - The test statistic is outside of the range of p-values available in the
+look-up table. The actual p-value is smaller than the p-value returned.
+ (Category: InterpolationWarning, File: /home/tathiana/PycharmProjects/conbrepro/statisticalanalysis.py, Line: 106)
+2024-08-19 14:03:13,328 - INFO - Statistic: 8.827824848477531
+2024-08-19 14:03:13,328 - INFO - p-value: 0.01
+2024-08-19 14:03:13,328 - INFO - Critical value: {'10%': 0.347, '5%': 0.463, '2.5%': 0.574, '1%': 0.739}
+2024-08-19 14:03:13,328 - INFO - KPSS Statistic (8.827824848477531) é maior que o valor crítico de 10% (0.347) - Rejeita a hipótese nula de estacionaridade - pode não ser estacionária.
+2024-08-19 14:03:13,328 - INFO - KPSS Statistic (8.827824848477531) é maior que o valor crítico de 5% (0.463) - Rejeita a hipótese nula de estacionaridade - pode não ser estacionária.
+2024-08-19 14:03:13,328 - INFO - KPSS Statistic (8.827824848477531) é maior que o valor crítico de 2.5% (0.574) - Rejeita a hipótese nula de estacionaridade - pode não ser estacionária.
+2024-08-19 14:03:13,328 - INFO - KPSS Statistic (8.827824848477531) é maior que o valor crítico de 1% (0.739) - Rejeita a hipótese nula de estacionaridade - pode não ser estacionária.
+2024-08-19 14:03:13,328 - INFO - Arquivo: INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_processed.csv
+2024-08-19 14:03:13,820 - INFO - Quantidade de Observações: 8760
+2024-08-19 14:03:13,820 - INFO - Data de Início: 2023-01-01 00:00:00
+2024-08-19 14:03:13,820 - INFO - Data de Fim: 2023-12-31 23:00:00
+2024-08-19 14:03:13,823 - INFO - Descrição estatística: 
+                                 radiacao_global
+                          count      8760.000000
+                          mean        646.037169
+                          std         865.237114
+                          min           0.000000
+                          25%           0.000000
+                          50%          20.000000
+                          75%        1311.275000
+                          max        3070.400000
+2024-08-19 14:03:13,823 - INFO - Teste Dickey-Fuller
+2024-08-19 14:03:14,010 - INFO - Statistic: -11.603907765946445
+2024-08-19 14:03:14,011 - INFO - p-value: 2.6088137958407704e-21
+2024-08-19 14:03:14,011 - INFO - Critical value: {'1%': -3.431099968539641, '5%': -2.86187143613454, '10%': -2.5669464184887825}
+2024-08-19 14:03:14,011 - INFO - ADF Statistic (-11.603907765946445) é menor que o valor crítico de 1% (-3.431099968539641) - Rejeita a hipótese nula de raiz unitária - é estacionária.
+2024-08-19 14:03:14,011 - INFO - ADF Statistic (-11.603907765946445) é menor que o valor crítico de 5% (-2.86187143613454) - Rejeita a hipótese nula de raiz unitária - é estacionária.
+2024-08-19 14:03:14,011 - INFO - ADF Statistic (-11.603907765946445) é menor que o valor crítico de 10% (-2.5669464184887825) - Rejeita a hipótese nula de raiz unitária - é estacionária.
+2024-08-19 14:03:14,011 - INFO - Teste KPSS
+2024-08-19 14:03:14,011 - WARNING - The test statistic is outside of the range of p-values available in the
+look-up table. The actual p-value is smaller than the p-value returned.
+ (Category: InterpolationWarning, File: /home/tathiana/PycharmProjects/conbrepro/statisticalanalysis.py, Line: 106)
+2024-08-19 14:03:14,011 - INFO - Statistic: 6.234483581701809
+2024-08-19 14:03:14,011 - INFO - p-value: 0.01
+2024-08-19 14:03:14,011 - INFO - Critical value: {'10%': 0.347, '5%': 0.463, '2.5%': 0.574, '1%': 0.739}
+2024-08-19 14:03:14,011 - INFO - KPSS Statistic (6.234483581701809) é maior que o valor crítico de 10% (0.347) - Rejeita a hipótese nula de estacionaridade - pode não ser estacionária.
+2024-08-19 14:03:14,011 - INFO - KPSS Statistic (6.234483581701809) é maior que o valor crítico de 5% (0.463) - Rejeita a hipótese nula de estacionaridade - pode não ser estacionária.
+2024-08-19 14:03:14,011 - INFO - KPSS Statistic (6.234483581701809) é maior que o valor crítico de 2.5% (0.574) - Rejeita a hipótese nula de estacionaridade - pode não ser estacionária.
+2024-08-19 14:03:14,011 - INFO - KPSS Statistic (6.234483581701809) é maior que o valor crítico de 1% (0.739) - Rejeita a hipótese nula de estacionaridade - pode não ser estacionária.
