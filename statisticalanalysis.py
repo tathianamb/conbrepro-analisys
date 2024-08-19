@@ -147,7 +147,7 @@ class StatisticalAnalysis:
     def process_files(self, files):
         if isinstance(files, pd.DataFrame):
             data = files
-            file_name = 'data_from_dataframe'
+            file_name = os.path.splitext(data.name)[0]
             self.create_save_images(data, file_name)
             self.log_statistics(data)
         elif isinstance(files, list) and all(isinstance(file, str) for file in files):
