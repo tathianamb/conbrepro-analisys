@@ -30,6 +30,12 @@ class StatisticalAnalysis:
     def __init__(self, load_folder_path, save_folder_path):
         self.load_folder_path = load_folder_path
         self.save_folder_path = save_folder_path
+        self._ensure_save_folder_exists()
+
+    def _ensure_save_folder_exists(self):
+        if not os.path.exists(self.save_folder_path):
+            os.makedirs(self.save_folder_path)
+            logging.info(f'Criada a pasta para salvar arquivos: {self.save_folder_path}')
 
     def load_data(self, file_path):
         # Carregar dados do arquivo CSV
@@ -79,6 +85,9 @@ class StatisticalAnalysis:
 
     def create_save_images(self, data, file):
         base_name = os.path.splitext(file)[0]
+        if not pd.api.types.is_datetime64_any_dtype(data.index):
+            logging.debug('Convertendo o índice para datetime.')
+            data.index = data.index.to_timestamp()
         self.plot_time_series(data[:150], base_name, os.path.join(self.save_folder_path, f"{base_name}_time_series.png"))
         self.seasonal_decompose_img(data[:150], os.path.join(self.save_folder_path, f"{base_name}_seasonal_decompose.png"))
         self.save_acf_img(data, os.path.join(self.save_folder_path, f"{base_name}_acf.png"))
@@ -136,12 +145,20 @@ class StatisticalAnalysis:
         self.test_stationarity(data)
 
     def process_files(self, files):
-        for file in files:
-            file_path = os.path.join(self.load_folder_path, file)
-            logging.info(f'Arquivo: {file}')
-            data = self.load_data(file_path)
-            self.create_save_images(data, file)
+        if isinstance(files, pd.DataFrame):
+            data = files
+            file_name = 'data_from_dataframe'
+            self.create_save_images(data, file_name)
             self.log_statistics(data)
+        elif isinstance(files, list) and all(isinstance(file, str) for file in files):
+            for file in files:
+                file_path = os.path.join(self.load_folder_path, file)
+                logging.info(f'Arquivo: {file}')
+                data = self.load_data(file_path)
+                self.create_save_images(data, file)
+                self.log_statistics(data)
+        else:
+            raise ValueError("O argumento 'files' deve ser um DataFrame ou uma lista de caminhos de arquivos.")
 
 # Exemplo de uso
 if __name__ == "__main__":
