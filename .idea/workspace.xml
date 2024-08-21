@@ -4,18 +4,57 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17da7324-e4f3-496b-8f61-36e6cf4370bb" name="Changes" comment="selected data">
-      <change afterPath="$PROJECT_DIR$/DATASET2023/.~lock.INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023.csv#" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DATASET2023/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_no_description.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DATASET2023/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_processed.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DATASET2023/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_no_description.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DATASET2023/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_processed.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DATASET2023/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_no_description.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DATASET2023/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_processed.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DATASET2023/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_no_description.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DATASET2023/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_processed.csv" afterDir="false" />
+    <list default="true" id="17da7324-e4f3-496b-8f61-36e6cf4370bb" name="Changes" comment="changing script names">
+      <change afterPath="$PROJECT_DIR$/LOG-MODELLING.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_processed_acf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_processed_pacf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_processed_seasonal_decompose.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_processed_time_series.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_processed_acf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_processed_pacf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_processed_seasonal_decompose.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_processed_time_series.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_processed_acf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_processed_pacf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_processed_seasonal_decompose.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_processed_time_series.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_processed_acf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_processed_pacf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_processed_seasonal_decompose.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_processed_time_series.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/file-train_acf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/file-train_pacf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/file-train_time_series.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_selected_time_series.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_selected_time_series.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_selected_seasonal_decompose.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_selected_time_series.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/LOG-STATISTICALANALYSIS.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hybrid_model.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DATASET2023-INPUT/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_processed.csv" beforeDir="false" afterPath="$PROJECT_DIR$/DATASET2023-INPUT/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_selected.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DATASET2023-INPUT/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_processed.csv" beforeDir="false" afterPath="$PROJECT_DIR$/DATASET2023-INPUT/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_selected.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DATASET2023-INPUT/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_processed.csv" beforeDir="false" afterPath="$PROJECT_DIR$/DATASET2023-INPUT/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_selected.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DATASET2023-INPUT/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_processed.csv" beforeDir="false" afterPath="$PROJECT_DIR$/DATASET2023-INPUT/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_selected.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_processed_acf.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_selected_acf.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_processed_pacf.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_selected_pacf.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_processed_seasonal_decompose.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_selected_seasonal_decompose.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_processed_time_series.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_processed_acf.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_selected_acf.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_processed_pacf.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_selected_pacf.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_processed_seasonal_decompose.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_selected_seasonal_decompose.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_processed_time_series.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_processed_acf.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_selected_acf.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_processed_pacf.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_selected_pacf.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_processed_seasonal_decompose.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_selected_seasonal_decompose.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_processed_time_series.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_processed_acf.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_selected_acf.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_processed_pacf.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_selected_pacf.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_processed_seasonal_decompose.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/file-train_seasonal_decompose.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_processed_time_series.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/LOG-STATISTICALANALYSIS.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/arima_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/arima_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process.py" beforeDir="false" afterPath="$PROJECT_DIR$/process.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,15 +98,23 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Python.preprocess.executor": "Run",
+    "Python.process.executor": "Run",
+    "Python.statisticalanalysis.executor": "Run",
+    "Python.utils.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "last_opened_file_path": "/home/tathiana/PycharmProjects/conbrepro/DATASET2023/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023.csv",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.CSV/TSV/PSV",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "two.files.diff.last.used.file": "/home/tathiana/PycharmProjects/conbrepro/DATASET2023/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023.csv"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration name="preprocess" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/STATISTICALANALYSIS" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.process">
+    <configuration name="process" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="conbrepro" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -80,7 +127,73 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/preprocess.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/process.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="selectdata" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="conbrepro" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/selectdata.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="statisticalanalysis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="conbrepro" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/statisticalanalysis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="utils" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="conbrepro" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -91,14 +204,17 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.preprocess" />
+        <item itemvalue="Python.process" />
+        <item itemvalue="Python.utils" />
+        <item itemvalue="Python.statisticalanalysis" />
+        <item itemvalue="Python.selectdata" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-f5635417b835-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18968.29" />
+        <option value="bundled-python-sdk-ce3d9afa04ac-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.20224.347" />
       </set>
     </attachedChunks>
   </component>
@@ -135,7 +251,199 @@
       <option name="project" value="LOCAL" />
       <updated>1723742030498</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="coding preprocess">
+      <option name="closed" value="true" />
+      <created>1723767212978</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1723767212978</updated>
+    </task>
+    <task id="LOCAL-00005" summary="data">
+      <option name="closed" value="true" />
+      <created>1723767223034</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723767223034</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fixed values">
+      <option name="closed" value="true" />
+      <created>1723841084803</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723841084803</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Remover a conversão de dados em formato específico para o campo de radiação global diretamente após a leitura.&#10;Substituir valores '////' por pd.NA e tratar valores faltantes com preenchimento por zero, garantindo a integridade dos dados.&#10;Criar uma nova coluna datetime combinando data e hora, convertendo para o formato '%Y-%m-%d %H:%M:%S', e usar como índice do DataFrame.&#10;Excluir as colunas originais data e hora após criar a coluna datetime.&#10;Ajustar o salvamento do arquivo processado para incluir o índice datetime no arquivo CSV.&#10;Corrigido o tratamento de valores e a conversão de tipos para garantir que os dados sejam mais precisos e fáceis de analisar.">
+      <option name="closed" value="true" />
+      <created>1723841176542</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1723841176542</updated>
+    </task>
+    <task id="LOCAL-00008" summary="updating folder name">
+      <option name="closed" value="true" />
+      <created>1723843845322</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1723843845322</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add statistical analysis files">
+      <option name="closed" value="true" />
+      <created>1723843874239</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1723843874239</updated>
+    </task>
+    <task id="LOCAL-00010" summary="add statistical analysis script">
+      <option name="closed" value="true" />
+      <created>1723844676419</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1723844676419</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fix functions to save acf and pacf images">
+      <option name="closed" value="true" />
+      <created>1723845235760</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1723845235760</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Atualiza análise estatística e processamento de séries temporais&#10;&#10;- Adiciona teste KPSS além do teste Dickey-Fuller para verificar estacionariedade.&#10;- Implementa decomposição sazonal das séries temporais.&#10;- Refatora funções de criação de imagens e adota estrutura mais modular.&#10;- Melhora configuração de logging e tratamento de warnings.&#10;- Atualiza o formato do arquivo de log para .log.&#10;- Adiciona tratamento de warnings específicos (InterpolationWarning).&#10;&#10;Principais mudanças:&#10;- Inclusão do teste KPSS para análise de estacionariedade.&#10;- Criação de imagens de decomposição sazonal.&#10;- Refatoração de funções para modularização e clareza.&#10;- Atualização de logging e tratamento de warnings.">
+      <option name="closed" value="true" />
+      <created>1723911262000</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1723911262000</updated>
+    </task>
+    <task id="LOCAL-00013" summary="rename folder path">
+      <option name="closed" value="true" />
+      <created>1723911871614</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1723911871614</updated>
+    </task>
+    <task id="LOCAL-00014" summary="statistical analysis results">
+      <option name="closed" value="true" />
+      <created>1723911899854</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1723911899854</updated>
+    </task>
+    <task id="LOCAL-00015" summary="testing arma model">
+      <option name="closed" value="true" />
+      <created>1723919738079</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1723919738079</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Melhorias na carga de dados e escalonamento; adição de registro de erros e persistência de resíduos&#10;&#10;- Atualizado o log para registrar informações e erros detalhados durante o carregamento dos dados.&#10;- Implementada a divisão dos dados em conjuntos de treinamento, validação e teste usando `train_test_split`.&#10;- Adicionado escalonamento dos dados de validação e teste com o mesmo `MinMaxScaler` usado para o treinamento.&#10;- Incluída a previsão dos resíduos do modelo ARMA e salvamento desses resíduos em um arquivo CSV.&#10;- Melhorada a robustez do código com tratamento de exceções e mensagens de log informativas.">
+      <option name="closed" value="true" />
+      <created>1723921558036</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1723921558036</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Refatora código para encapsular funcionalidades na classe StatisticalAnalysis&#10;&#10;- Cria a classe `StatisticalAnalysis` para organizar funções relacionadas à análise estatística.&#10;- Move funções para métodos da classe e adiciona inicialização de caminhos de pasta no construtor.&#10;- Adiciona método `process_files` para processamento de arquivos e geração de análises estatísticas.&#10;- Atualiza o exemplo de uso para instanciar a classe e chamar o método `process_files`.&#10;- Melhora a estrutura e legibilidade do código, facilitando a manutenção e extensibilidade.">
+      <option name="closed" value="true" />
+      <created>1724087053809</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1724087053809</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Refatora código para encapsular funcionalidades na classe StatisticalAnalysis&#10;&#10;- Cria a classe `StatisticalAnalysis` para organizar funções relacionadas à análise estatística.&#10;- Move funções para métodos da classe e adiciona inicialização de caminhos de pasta no construtor.&#10;- Adiciona método `process_files` para processamento de arquivos e geração de análises estatísticas.&#10;- Atualiza o exemplo de uso para instanciar a classe e chamar o método `process_files`.&#10;- Melhora a estrutura e legibilidade do código, facilitando a manutenção e extensibilidade.">
+      <option name="closed" value="true" />
+      <created>1724087061414</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1724087061414</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Enhancements and Fixes in Statistical Analysis Script&#10;&#10;Folder Creation: Added _ensure_save_folder_exists method to automatically create the save directory if it doesn't exist.&#10;Datetime Index Handling: Added check and conversion to datetime index in create_save_images method to handle cases where the index might not be in datetime format.&#10;File Handling: Updated process_files method to accept both a list of file paths and a single DataFrame, enhancing flexibility.&#10;Logging: Improved logging messages to provide more detailed information about the processing steps.&#10;Code Refactoring: Cleaned up and organized the code for better readability and maintainability.">
+      <option name="closed" value="true" />
+      <created>1724088839888</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1724088839888</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Refactor and Update Modeling Script&#10;&#10;File and Folder Handling: Modified DataLoader to handle file paths more flexibly and added a folder_path parameter. Adjusted load_data method to convert datetime index to Period with specified frequency.&#10;Data Processing: Added differencing step to radiacao_global data with a configurable shift. This improves stationarity for time series modeling.&#10;Integration with Statistical Analysis: Incorporated StatisticalAnalysis class to process and analyze the data before modeling.&#10;Modeling Updates: Switched from ARMA to ARIMA modeling. Updated model fitting and prediction steps using ARIMA_Model.&#10;Scaling: Scaled training, validation, and test datasets using MinMaxScaler and saved the results to improve model performance.&#10;Error Handling: Enhanced error logging for data loading and modeling processes.">
+      <option name="closed" value="true" />
+      <created>1724089551966</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1724089551966</updated>
+    </task>
+    <task id="LOCAL-00021" summary="get file name from dataframe">
+      <option name="closed" value="true" />
+      <created>1724089571554</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1724089571554</updated>
+    </task>
+    <task id="LOCAL-00022" summary="creating lstm">
+      <option name="closed" value="true" />
+      <created>1724089586127</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1724089586127</updated>
+    </task>
+    <task id="LOCAL-00023" summary="creating arima">
+      <option name="closed" value="true" />
+      <created>1724089600956</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1724089600956</updated>
+    </task>
+    <task id="LOCAL-00024" summary="changing preprocess class to the right file">
+      <option name="closed" value="true" />
+      <created>1724248021006</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1724248021006</updated>
+    </task>
+    <task id="LOCAL-00025" summary="changing preprocess class to the right file and add DataLoader class">
+      <option name="closed" value="true" />
+      <created>1724248054171</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1724248054171</updated>
+    </task>
+    <task id="LOCAL-00026" summary="changing file and path names">
+      <option name="closed" value="true" />
+      <created>1724248079581</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1724248079581</updated>
+    </task>
+    <task id="LOCAL-00027" summary="changing script names">
+      <option name="closed" value="true" />
+      <created>1724248092749</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1724248092749</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -153,6 +461,29 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="first commit" />
     <MESSAGE value="selected data" />
-    <option name="LAST_COMMIT_MESSAGE" value="selected data" />
+    <MESSAGE value="coding preprocess" />
+    <MESSAGE value="data" />
+    <MESSAGE value="fixed values" />
+    <MESSAGE value="Remover a conversão de dados em formato específico para o campo de radiação global diretamente após a leitura.&#10;Substituir valores '////' por pd.NA e tratar valores faltantes com preenchimento por zero, garantindo a integridade dos dados.&#10;Criar uma nova coluna datetime combinando data e hora, convertendo para o formato '%Y-%m-%d %H:%M:%S', e usar como índice do DataFrame.&#10;Excluir as colunas originais data e hora após criar a coluna datetime.&#10;Ajustar o salvamento do arquivo processado para incluir o índice datetime no arquivo CSV.&#10;Corrigido o tratamento de valores e a conversão de tipos para garantir que os dados sejam mais precisos e fáceis de analisar." />
+    <MESSAGE value="updating folder name" />
+    <MESSAGE value="add statistical analysis files" />
+    <MESSAGE value="add statistical analysis script" />
+    <MESSAGE value="fix functions to save acf and pacf images" />
+    <MESSAGE value="Atualiza análise estatística e processamento de séries temporais&#10;&#10;- Adiciona teste KPSS além do teste Dickey-Fuller para verificar estacionariedade.&#10;- Implementa decomposição sazonal das séries temporais.&#10;- Refatora funções de criação de imagens e adota estrutura mais modular.&#10;- Melhora configuração de logging e tratamento de warnings.&#10;- Atualiza o formato do arquivo de log para .log.&#10;- Adiciona tratamento de warnings específicos (InterpolationWarning).&#10;&#10;Principais mudanças:&#10;- Inclusão do teste KPSS para análise de estacionariedade.&#10;- Criação de imagens de decomposição sazonal.&#10;- Refatoração de funções para modularização e clareza.&#10;- Atualização de logging e tratamento de warnings." />
+    <MESSAGE value="rename folder path" />
+    <MESSAGE value="statistical analysis results" />
+    <MESSAGE value="testing arma model" />
+    <MESSAGE value="Melhorias na carga de dados e escalonamento; adição de registro de erros e persistência de resíduos&#10;&#10;- Atualizado o log para registrar informações e erros detalhados durante o carregamento dos dados.&#10;- Implementada a divisão dos dados em conjuntos de treinamento, validação e teste usando `train_test_split`.&#10;- Adicionado escalonamento dos dados de validação e teste com o mesmo `MinMaxScaler` usado para o treinamento.&#10;- Incluída a previsão dos resíduos do modelo ARMA e salvamento desses resíduos em um arquivo CSV.&#10;- Melhorada a robustez do código com tratamento de exceções e mensagens de log informativas." />
+    <MESSAGE value="Refatora código para encapsular funcionalidades na classe StatisticalAnalysis&#10;&#10;- Cria a classe `StatisticalAnalysis` para organizar funções relacionadas à análise estatística.&#10;- Move funções para métodos da classe e adiciona inicialização de caminhos de pasta no construtor.&#10;- Adiciona método `process_files` para processamento de arquivos e geração de análises estatísticas.&#10;- Atualiza o exemplo de uso para instanciar a classe e chamar o método `process_files`.&#10;- Melhora a estrutura e legibilidade do código, facilitando a manutenção e extensibilidade." />
+    <MESSAGE value="Enhancements and Fixes in Statistical Analysis Script&#10;&#10;Folder Creation: Added _ensure_save_folder_exists method to automatically create the save directory if it doesn't exist.&#10;Datetime Index Handling: Added check and conversion to datetime index in create_save_images method to handle cases where the index might not be in datetime format.&#10;File Handling: Updated process_files method to accept both a list of file paths and a single DataFrame, enhancing flexibility.&#10;Logging: Improved logging messages to provide more detailed information about the processing steps.&#10;Code Refactoring: Cleaned up and organized the code for better readability and maintainability." />
+    <MESSAGE value="Refactor and Update Modeling Script&#10;&#10;File and Folder Handling: Modified DataLoader to handle file paths more flexibly and added a folder_path parameter. Adjusted load_data method to convert datetime index to Period with specified frequency.&#10;Data Processing: Added differencing step to radiacao_global data with a configurable shift. This improves stationarity for time series modeling.&#10;Integration with Statistical Analysis: Incorporated StatisticalAnalysis class to process and analyze the data before modeling.&#10;Modeling Updates: Switched from ARMA to ARIMA modeling. Updated model fitting and prediction steps using ARIMA_Model.&#10;Scaling: Scaled training, validation, and test datasets using MinMaxScaler and saved the results to improve model performance.&#10;Error Handling: Enhanced error logging for data loading and modeling processes." />
+    <MESSAGE value="get file name from dataframe" />
+    <MESSAGE value="creating lstm" />
+    <MESSAGE value="creating arima" />
+    <MESSAGE value="changing preprocess class to the right file" />
+    <MESSAGE value="changing preprocess class to the right file and add DataLoader class" />
+    <MESSAGE value="changing file and path names" />
+    <MESSAGE value="changing script names" />
+    <option name="LAST_COMMIT_MESSAGE" value="changing script names" />
   </component>
 </project>
