@@ -1,47 +1,92 @@
 import pandas as pd
-import os
+import numpy as np
 
-# Caminho da pasta onde os arquivos estão localizados
-folder_path = "DATASET2023-INPUT"
+"""
+    Na programação utilizamos como guia o chamado "Clean Code", que é o que rege a ideia que você me pediu.
 
-# Lista de arquivos CSV (com caminho completo)
-files = [
-    os.path.join(folder_path, "INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023.csv"),
-    os.path.join(folder_path, "INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023.csv"),
-    os.path.join(folder_path, "INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023.csv"),
-    os.path.join(folder_path, "INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023.csv")
-]
-
-
-def preprocess_file(file_path):
-    # Carrega o arquivo CSV pulando as primeiras 8 linhas e lendo a linha 9 como o header
-    df = pd.read_csv(file_path, delimiter=';', encoding='latin1', skiprows=8)
-
-    # Salva o DataFrame sem as primeiras 8 linhas (não processado)
-    raw_path = os.path.join(folder_path, os.path.splitext(os.path.basename(file_path))[0] + '_no_description.csv')
-    df.to_csv(raw_path, index=False)
-
-    # Renomeia as colunas para consistência (remove espaços e converte para minúsculas)
-    df.columns = df.columns.str.strip().str.lower().str.replace(' ', '_')
-    columns_to_keep = ['data', 'hora_utc', 'radiacao_global_(kj/m²)']
-    df = df[columns_to_keep]
-    df.columns = ['data', 'hora', 'radiacao_global']
-
-    # Tratamento de valores
-    df = df.replace('////', pd.NA)
-    df['radiacao_global'] = df['radiacao_global'].str.replace(',', '.').astype(float)
-    df.fillna({'radiacao_global': 0}, inplace=True)
-    df['radiacao_global'] = pd.to_numeric(df['radiacao_global'], errors='coerce')
-    df['datetime'] = pd.to_datetime(df['data'].astype(str) + ' ' + df['hora'].astype(str).str.replace(' UTC', ''), format='%Y/%m/%d %H%M')
-    df = df.drop(columns=['data', 'hora'])
-    df['datetime'] = df['datetime'].dt.strftime('%Y-%m-%d %H:%M:%S')
-    df = df.set_index('datetime')
-
-    processed_file_path = os.path.join(folder_path, os.path.splitext(os.path.basename(file_path))[0] + '_processed.csv')
-    df.to_csv(processed_file_path, index=True)
-    print(f"Arquivo processado salvo em: {processed_file_path}")
+    Portanto, o primeiro tópico que deixo é:
+        1- Não utilize 'comentários desnecessários', o que não é DOCUMENTAÇÃO;
+        2- Desenvolva tudo em INGLÊS - em PT-BR somente a DOCUMENTAÇÃO;
+        3- A função tem que exercer somente uma etapa. Ex: "createHandleAndGetResult() deveriam ser createData() / handleData() / getResultOfData()
+            3.1- Se os parâmetros das funções se repetem, então deveria ser uma variável da classe. Ex: As funções 'differentiate' e 'reverse_differentiation'
+                    recebem 'df' e 'name', mas isso deveria fazer parte das variáveis da classe. Pois a ideia de classe é ser ESPECÍFICA e não GENÉRICA.
+            3.2- Na 'main', cada um dos blocos deveria se tornar uma função PRIVADA.
+        4- Dê valores padrões para os parâmetros que dificilmente mudem (ex: 'column_name' no construtor da classe Differentiator)
 
 
-# Pré-processa cada arquivo
-for file in files:
-    preprocess_file(file)
+    LUFI UUUUUUUU    
+"""
+
+
+class Differentiator:
+    def __init__(self, column_name, shift=1):
+        """
+        Inicializa a classe Differentiator.
+
+        Args:
+            column_name (str): Nome da coluna para diferenciação.
+            shift (int): Número de períodos para o deslocamento.
+        """
+        self.column_name = column_name
+        self.shift = shift
+        self.initial_values = {}
+
+    def differentiate(self, df, name):
+        """
+        Aplica a diferenciação à coluna especificada do DataFrame.
+
+        Args:
+            df (pd.DataFrame): DataFrame contendo os dados a serem diferenciados.
+            name (str): Nome do conjunto de dados (treinamento, validação, teste).
+
+        Returns:
+            pd.DataFrame: DataFrame com a coluna diferenciada.
+        """
+        df_diff = df.copy()
+        if name not in self.initial_values:
+            self.initial_values[name] = df_diff[self.column_name].head(self.shift).tolist()
+
+        df_diff[self.column_name] = df_diff[self.column_name] - df_diff[self.column_name].shift(self.shift)
+        df_diff = df_diff.iloc[self.shift:]
+        return df_diff
+
+    def reverse_differentiation(self, df_diff, name):
+        """
+        Reverte a diferenciação aplicada anteriormente à coluna especificada do DataFrame.
+
+        Args:
+            df_diff (pd.DataFrame): DataFrame contendo os dados diferenciados.
+            name (str): Nome do conjunto de dados (treinamento, validação, teste).
+
+        Returns:
+            pd.DataFrame: DataFrame com a coluna revertida.
+        """
+        df = df_diff.copy()
+        if name not in self.initial_values:
+            raise ValueError(f"Differenciação não aplicada para o conjunto {name}.")
+
+        original_length = len(df) + self.shift
+        reverted_values = np.cumsum(self.initial_values[name] + df[self.column_name].tolist()).tolist()
+
+        if len(reverted_values) != original_length:
+            raise ValueError(
+                f"O comprimento revertido não corresponde ao comprimento original esperado: {original_length}.")
+
+        freq = df.index.freq
+        start_period = df.index[0] - self.shift
+        end_period = df.index[-1]
+        reverted_df_index = pd.period_range(start=start_period, end=end_period, freq=freq)
+        reverted_df = pd.DataFrame(data=reverted_values, index=reverted_df_index, columns=df_diff.columns)
+        return reverted_df
+
+
+# Exemplo de uso
+if __name__ == "__main__":
+    '''df2 = pd.DataFrame({'A': [1, 2, 3]}, index=pd.period_range('2023-01', '2023-03', freq='M'))
+    differentiator = Differentiator(column_name='A', shift=1)
+    df2_diff = differentiator.differentiate(df2, 'df2')
+    print("\nDados df2_diff Diferenciados:")
+    print(df2_diff)
+    df2_reverted = differentiator.reverse_differentiation(df2_diff, 'df2')
+    print("\nDados df2_reverted Revertidos:")
+    print(df2_reverted)'''
