@@ -1,46 +1,250 @@
-import logging
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import LSTM, Dense
-import kerastuner as kt
+import pandas as pd
+import matplotlib.pyplot as plt
+import keras
+from zipfile import ZipFile
+
+uri = "https://storage.googleapis.com/tensorflow/tf-keras-datasets/jena_climate_2009_2016.csv.zip"
+zip_path = keras.utils.get_file(origin=uri, fname="jena_climate_2009_2016.csv.zip")
+zip_file = ZipFile(zip_path)
+zip_file.extractall()
+csv_path = "jena_climate_2009_2016.csv"
+
+df = pd.read_csv(csv_path)
+
+titles = [
+    "Pressure",
+    "Temperature",
+    "Temperature in Kelvin",
+    "Temperature (dew point)",
+    "Relative Humidity",
+    "Saturation vapor pressure",
+    "Vapor pressure",
+    "Vapor pressure deficit",
+    "Specific humidity",
+    "Water vapor concentration",
+    "Airtight",
+    "Wind speed",
+    "Maximum wind speed",
+    "Wind direction in degrees",
+]
+
+feature_keys = [
+    "p (mbar)",
+    "T (degC)",
+    "Tpot (K)",
+    "Tdew (degC)",
+    "rh (%)",
+    "VPmax (mbar)",
+    "VPact (mbar)",
+    "VPdef (mbar)",
+    "sh (g/kg)",
+    "H2OC (mmol/mol)",
+    "rho (g/m**3)",
+    "wv (m/s)",
+    "max. wv (m/s)",
+    "wd (deg)",
+]
+
+colors = [
+    "blue",
+    "orange",
+    "green",
+    "red",
+    "purple",
+    "brown",
+    "pink",
+    "gray",
+    "olive",
+    "cyan",
+]
+
+date_time_key = "Date Time"
 
 
-# Configuração do log
-logging.basicConfig(
-    filename='LOG-MODELLING.log',
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    encoding='utf-8'
+split_fraction = 0.715
+train_split = int(split_fraction * int(df.shape[0]))
+step = 6
+
+past = 720
+future = 72
+learning_rate = 0.001
+batch_size = 256
+epochs = 10
+
+
+def normalize(data, train_split):
+    data_mean = data[:train_split].mean(axis=0)
+    data_std = data[:train_split].std(axis=0)
+    return (data - data_mean) / data_std
+
+print(
+    "The selected parameters are:",
+    ", ".join([titles[i] for i in [0, 1, 5, 7, 8, 10, 11]]),
+)
+selected_features = [feature_keys[i] for i in [0, 1, 5, 7, 8, 10, 11]]
+features = df[selected_features]
+features.index = df[date_time_key]
+features.head()
+
+features = normalize(features.values, train_split)
+features = pd.DataFrame(features)
+features.head()
+
+train_data = features.loc[0 : train_split - 1]
+val_data = features.loc[train_split:]
+
+"""
+# Training dataset
+
+The training dataset labels starts from the 792nd observation (720 + 72).
+"""
+
+start = past + future
+end = start + train_split
+
+x_train = train_data[[i for i in range(7)]].values
+y_train = features.iloc[start:end][[1]]
+
+sequence_length = int(past / step)
+
+"""
+The `timeseries_dataset_from_array` function takes in a sequence of data-points gathered at
+equal intervals, along with time series parameters such as length of the
+sequences/windows, spacing between two sequence/windows, etc., to produce batches of
+sub-timeseries inputs and targets sampled from the main timeseries.
+"""
+
+dataset_train = keras.preprocessing.timeseries_dataset_from_array(
+    x_train,
+    y_train,
+    sequence_length=sequence_length,
+    sampling_rate=step,
+    batch_size=batch_size,
 )
 
-class LSTM_Model:
-    def __init__(self):
-        self.tuner = None
+"""
+## Validation dataset
 
-    def build_lstm_model(self, hp):
-        model = Sequential()
-        model.add(LSTM(units=hp.Int('units1', min_value=20, max_value=100, step=20), return_sequences=True,
-                       input_shape=(None, 1)))
-        model.add(LSTM(units=hp.Int('units2', min_value=20, max_value=100, step=20)))
-        model.add(Dense(1))
+The validation dataset must not contain the last 792 rows as we won't have label data for
+those records, hence 792 must be subtracted from the end of the data.
 
-        model.compile(optimizer=hp.Choice('optimizer', values=['adam', 'rmsprop']), loss='mean_squared_error')
-        return model
+The validation label dataset must start from 792 after train_split, hence we must add
+past + future (792) to label_start.
+"""
 
-    def tune_lstm(self, X_train, y_train, X_val, y_val):
-        self.tuner = kt.Hyperband(
-            self.build_lstm_model,
-            objective='val_loss',
-            max_epochs=20,
-            factor=3,
-            directory='my_dir',
-            project_name='lstm_tuning'
-        )
+x_end = len(val_data) - past - future
 
-        self.tuner.search(X_train, y_train, epochs=20, validation_data=(X_val, y_val))
+label_start = train_split + past + future
 
-        best_hps = self.tuner.get_best_hyperparameters(num_trials=1)[0]
-        model = self.build_lstm_model(best_hps)
-        model.fit(X_train, y_train, epochs=20, batch_size=32, verbose=1, validation_data=(X_val, y_val))
+x_val = val_data.iloc[:x_end][[i for i in range(7)]].values
+y_val = features.iloc[label_start:][[1]]
 
-        return model
+dataset_val = keras.preprocessing.timeseries_dataset_from_array(
+    x_val,
+    y_val,
+    sequence_length=sequence_length,
+    sampling_rate=step,
+    batch_size=batch_size,
+)
 
+
+for batch in dataset_train.take(1):
+    inputs, targets = batch
+
+print("Input shape:", inputs.numpy().shape)
+print("Target shape:", targets.numpy().shape)
+
+"""
+## Training
+"""
+
+inputs = keras.layers.Input(shape=(inputs.shape[1], inputs.shape[2]))
+lstm_out = keras.layers.LSTM(32)(inputs)
+outputs = keras.layers.Dense(1)(lstm_out)
+
+model = keras.Model(inputs=inputs, outputs=outputs)
+model.compile(optimizer=keras.optimizers.Adam(learning_rate=learning_rate), loss="mse")
+model.summary()
+
+"""
+We'll use the `ModelCheckpoint` callback to regularly save checkpoints, and
+the `EarlyStopping` callback to interrupt training when the validation loss
+is not longer improving.
+"""
+
+path_checkpoint = "model_checkpoint.weights.h5"
+es_callback = keras.callbacks.EarlyStopping(monitor="val_loss", min_delta=0, patience=5)
+
+modelckpt_callback = keras.callbacks.ModelCheckpoint(
+    monitor="val_loss",
+    filepath=path_checkpoint,
+    verbose=1,
+    save_weights_only=True,
+    save_best_only=True,
+)
+
+history = model.fit(
+    dataset_train,
+    epochs=epochs,
+    validation_data=dataset_val,
+    callbacks=[es_callback, modelckpt_callback],
+)
+
+"""
+We can visualize the loss with the function below. After one point, the loss stops
+decreasing.
+"""
+
+
+def visualize_loss(history, title):
+    loss = history.history["loss"]
+    val_loss = history.history["val_loss"]
+    epochs = range(len(loss))
+    plt.figure()
+    plt.plot(epochs, loss, "b", label="Training loss")
+    plt.plot(epochs, val_loss, "r", label="Validation loss")
+    plt.title(title)
+    plt.xlabel("Epochs")
+    plt.ylabel("Loss")
+    plt.legend()
+    plt.show()
+
+
+visualize_loss(history, "Training and Validation Loss")
+
+"""
+## Prediction
+
+The trained model above is now able to make predictions for 5 sets of values from
+validation set.
+"""
+
+
+def show_plot(plot_data, delta, title):
+    labels = ["History", "True Future", "Model Prediction"]
+    marker = [".-", "rx", "go"]
+    time_steps = list(range(-(plot_data[0].shape[0]), 0))
+    if delta:
+        future = delta
+    else:
+        future = 0
+
+    plt.title(title)
+    for i, val in enumerate(plot_data):
+        if i:
+            plt.plot(future, plot_data[i], marker[i], markersize=10, label=labels[i])
+        else:
+            plt.plot(time_steps, plot_data[i].flatten(), marker[i], label=labels[i])
+    plt.legend()
+    plt.xlim([time_steps[0], (future + 5) * 2])
+    plt.xlabel("Time-Step")
+    plt.show()
+    return
+
+
+for x, y in dataset_val.take(5):
+    show_plot(
+        [x[0][:, 1].numpy(), y[0].numpy(), model.predict(x)[0]],
+        12,
+        "Single Step Prediction",
+    )
