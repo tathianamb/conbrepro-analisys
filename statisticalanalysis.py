@@ -10,7 +10,7 @@ from statsmodels.tools.sm_exceptions import InterpolationWarning
 
 
 logging.basicConfig(
-    filename='STATISTICALANALYSIS/LOG-STATISTICALANALYSIS.log',
+    filename='STATISTICALANALYSIS-RAWDATA/LOG-STATISTICALANALYSIS.log',
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     encoding='utf-8'
@@ -163,12 +163,12 @@ class StatisticalAnalysis:
 # Exemplo de uso
 if __name__ == "__main__":
     load_folder_path = 'DATASET2023-INPUT'
-    save_folder_path = 'STATISTICALANALYSIS'
+    save_folder_path = 'STATISTICALANALYSIS-RAWDATA'
     files = [
-        "INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_processed.csv",
-        "INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_processed.csv",
-        "INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_processed.csv",
-        "INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_processed.csv"
+        "INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_selected.csv",
+        "INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_selected.csv",
+        "INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_selected.csv",
+        "INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_selected.csv"
     ]
 
     analysis = StatisticalAnalysis(load_folder_path, save_folder_path)
