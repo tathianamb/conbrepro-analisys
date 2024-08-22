@@ -62,36 +62,20 @@ if __name__ == "__main__":
             analysis = StatisticalAnalysis(None, save_folder_path)
             analysis.process_files(df_train)
 
-            logging.debug('Iniciando ajuste de escala com MinMaxScaler de cada conjunto de dados.')
-            feature_range = (-1, 1)
-            scaler = MinMaxScaler(feature_range=feature_range)
-            df_train_scaled = pd.DataFrame(scaler.fit_transform(df_train), columns=df_train.columns, index=df_train.index)
-            df_val_scaled = pd.DataFrame(scaler.transform(df_val), columns=df_val.columns, index=df_val.index)
-            df_test_scaled = pd.DataFrame(scaler.transform(df_test), columns=df_test.columns, index=df_test.index)
-            logging.info(f'Dados escalonados para o intervalo: {feature_range}.')
-
             logging.debug('Instanciando ARIMA model')
-            arima_model = ARIMA_Model(df_train_scaled, df_val_scaled, df_test_scaled)
-            logging.info('Executando GridSearch.')
-            arima_model.grid_search()
-            logging.info('Ajustando e realizando previsões com o modelo ARIMA.')
-            arima_model.fit_predict()
+            arima_model = ARIMA_Model(df_train, df_val, df_test)
+            arima_model.run_pipeline(['scale_data', 'grid_search', 'fit_predict', 'undo_scale_data'])
 
-            logging.info('Calculando resíduos dos conjuntos de dados.')
-            df_train_resid = df_train_scaled.sub(arima_model.df_train_predicted, axis=0)
-            df_val_resid = df_val_scaled.sub(arima_model.df_val_predicted, axis=0)
-            df_test_resid = df_test_scaled.sub(arima_model.df_test_predicted, axis=0)
+            logging.debug(f'Realizando diferenciação dos dados')
+            df_train_diff_reverted = differentiator.reverse_differentiation(arima_model.df_train_unscaled, 'train')
+            df_val_diff_reverted = differentiator.reverse_differentiation(arima_model.df_val_unscaled, 'val')
+            df_test_diff_reverted = differentiator.reverse_differentiation(arima_model.df_test_unscaled, 'test')
+            logging.info(f'Revertendo diferenciação dos dados')
 
-            df_train_minmax_reverted = pd.DataFrame(scaler.inverse_transform(arima_model.df_train_predicted), columns=df_train.columns,
-                                             index=df_train.index)
-            df_val_minmax_reverted = pd.DataFrame(scaler.inverse_transform(arima_model.df_val_predicted), columns=df_val.columns,
-                                           index=df_val.index)
-            df_test_minmax_reverted = pd.DataFrame(scaler.inverse_transform(arima_model.df_test_predicted), columns=df_test.columns,
-                                            index=df_test.index)
-
-            df_train_diff_reverted = differentiator.reverse_differentiation(df_train_minmax_reverted, 'train')
-            df_val_diff_reverted = differentiator.reverse_differentiation(df_val_minmax_reverted, 'val')
-            df_test_diff_reverted = differentiator.reverse_differentiation(df_test_minmax_reverted, 'test')
+            df_train_resid = df_train.sub(df_train_diff_reverted, axis=0)
+            df_val_resid = df_val.sub(df_val_diff_reverted, axis=0)
+            df_test_resid = df_test.sub(df_test_diff_reverted, axis=0)
+            logging.info('Resíduos calculados para cada conjunto de dados.')
 
         except Exception as e:
             logging.error(f'Erro no processo de modelagem: {e}')
