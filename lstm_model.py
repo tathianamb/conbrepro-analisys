@@ -1,250 +1,69 @@
 import pandas as pd
-import matplotlib.pyplot as plt
 import keras
-from zipfile import ZipFile
+from utils import DataLoader
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import MinMaxScaler
+import numpy as np
 
-uri = "https://storage.googleapis.com/tensorflow/tf-keras-datasets/jena_climate_2009_2016.csv.zip"
-zip_path = keras.utils.get_file(origin=uri, fname="jena_climate_2009_2016.csv.zip")
-zip_file = ZipFile(zip_path)
-zip_file.extractall()
-csv_path = "jena_climate_2009_2016.csv"
 
-df = pd.read_csv(csv_path)
+def create_inputs(df_list, look_back=5):
+    def add_offsets(dataset, look_back=1):
+        dataX, dataY = [], []
+        for i in range(len(dataset) - look_back - 1):
+            a = dataset[i:(i + look_back), 0]
+            dataX.append(a)
+            dataY.append(dataset[i + look_back, 0])
+        return np.array(dataX), np.array(dataY)
 
-titles = [
-    "Pressure",
-    "Temperature",
-    "Temperature in Kelvin",
-    "Temperature (dew point)",
-    "Relative Humidity",
-    "Saturation vapor pressure",
-    "Vapor pressure",
-    "Vapor pressure deficit",
-    "Specific humidity",
-    "Water vapor concentration",
-    "Airtight",
-    "Wind speed",
-    "Maximum wind speed",
-    "Wind direction in degrees",
+    all_X = []
+    all_y = []
+    for df in df_list:
+        X, y = add_offsets(df.values, look_back)
+        all_X.append(X)
+        all_y.append(y)
+
+    return all_X, all_y
+
+folder_path = 'DATASET2023-INPUT'
+file = "INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_selected.csv"
+
+df = DataLoader(file, folder_path).load_data()
+
+df_train, df_test = train_test_split(df, train_size=0.8, shuffle=False)
+#df_train, df_temp = train_test_split(df, train_size=0.6, shuffle=False)
+#df_val, df_test = train_test_split(df_temp, train_size=0.5, shuffle=False)
+
+feature_range = (-1, 1)
+scaler = MinMaxScaler(feature_range=feature_range)
+df_train_scaled = pd.DataFrame(scaler.fit_transform(df_train), columns=df_train.columns, index=df_train.index)
+#df_val_scaled = pd.DataFrame(scaler.transform(df_val), columns=df_val.columns, index=df_val.index)
+df_test_scaled = pd.DataFrame(scaler.transform(df_test), columns=df_test.columns, index=df_test.index)
+
+#train_X, train_y, val_X, val_y, test_X, test_y = create_inputs([df_train_scaled, df_val_scaled, df_test_scaled])
+all_X, all_y = create_inputs([df_train_scaled, df_test_scaled])
+train_X = all_X[0]
+test_X = all_X[0]
+train_y = all_y[0]
+test_y = all_y[1]
+
+train_X = np.reshape(train_X, (train_X.shape[0], 1, train_X.shape[1]))
+#val_X = np.reshape(val_X, (val_X.shape[0], 1, val_X.shape[1]))
+test_X = np.reshape(test_X, (test_X.shape[0], 1, test_X.shape[1]))
+
+callbacks = [
+    keras.callbacks.ModelCheckpoint(
+        "best_model.keras", save_best_only=True, monitor="val_loss"
+    ),
+    keras.callbacks.ReduceLROnPlateau(
+        monitor="val_loss", factor=0.5, patience=20, min_lr=0.0001
+    ),
+    keras.callbacks.EarlyStopping(monitor="val_loss", patience=50, verbose=1),
 ]
 
-feature_keys = [
-    "p (mbar)",
-    "T (degC)",
-    "Tpot (K)",
-    "Tdew (degC)",
-    "rh (%)",
-    "VPmax (mbar)",
-    "VPact (mbar)",
-    "VPdef (mbar)",
-    "sh (g/kg)",
-    "H2OC (mmol/mol)",
-    "rho (g/m**3)",
-    "wv (m/s)",
-    "max. wv (m/s)",
-    "wd (deg)",
-]
+model = keras.models.Sequential()
+model.add(keras.layers.LSTM(4, input_shape=(1, 1)))
+model.add(keras.layers.Dense(1))
+model.compile(loss='mean_squared_error', optimizer='adam')
+history = model.fit(x=train_X, y=train_y,validation_split=0.2,epochs=100, batch_size=1, verbose=2)
 
-colors = [
-    "blue",
-    "orange",
-    "green",
-    "red",
-    "purple",
-    "brown",
-    "pink",
-    "gray",
-    "olive",
-    "cyan",
-]
-
-date_time_key = "Date Time"
-
-
-split_fraction = 0.715
-train_split = int(split_fraction * int(df.shape[0]))
-step = 6
-
-past = 720
-future = 72
-learning_rate = 0.001
-batch_size = 256
-epochs = 10
-
-
-def normalize(data, train_split):
-    data_mean = data[:train_split].mean(axis=0)
-    data_std = data[:train_split].std(axis=0)
-    return (data - data_mean) / data_std
-
-print(
-    "The selected parameters are:",
-    ", ".join([titles[i] for i in [0, 1, 5, 7, 8, 10, 11]]),
-)
-selected_features = [feature_keys[i] for i in [0, 1, 5, 7, 8, 10, 11]]
-features = df[selected_features]
-features.index = df[date_time_key]
-features.head()
-
-features = normalize(features.values, train_split)
-features = pd.DataFrame(features)
-features.head()
-
-train_data = features.loc[0 : train_split - 1]
-val_data = features.loc[train_split:]
-
-"""
-# Training dataset
-
-The training dataset labels starts from the 792nd observation (720 + 72).
-"""
-
-start = past + future
-end = start + train_split
-
-x_train = train_data[[i for i in range(7)]].values
-y_train = features.iloc[start:end][[1]]
-
-sequence_length = int(past / step)
-
-"""
-The `timeseries_dataset_from_array` function takes in a sequence of data-points gathered at
-equal intervals, along with time series parameters such as length of the
-sequences/windows, spacing between two sequence/windows, etc., to produce batches of
-sub-timeseries inputs and targets sampled from the main timeseries.
-"""
-
-dataset_train = keras.preprocessing.timeseries_dataset_from_array(
-    x_train,
-    y_train,
-    sequence_length=sequence_length,
-    sampling_rate=step,
-    batch_size=batch_size,
-)
-
-"""
-## Validation dataset
-
-The validation dataset must not contain the last 792 rows as we won't have label data for
-those records, hence 792 must be subtracted from the end of the data.
-
-The validation label dataset must start from 792 after train_split, hence we must add
-past + future (792) to label_start.
-"""
-
-x_end = len(val_data) - past - future
-
-label_start = train_split + past + future
-
-x_val = val_data.iloc[:x_end][[i for i in range(7)]].values
-y_val = features.iloc[label_start:][[1]]
-
-dataset_val = keras.preprocessing.timeseries_dataset_from_array(
-    x_val,
-    y_val,
-    sequence_length=sequence_length,
-    sampling_rate=step,
-    batch_size=batch_size,
-)
-
-
-for batch in dataset_train.take(1):
-    inputs, targets = batch
-
-print("Input shape:", inputs.numpy().shape)
-print("Target shape:", targets.numpy().shape)
-
-"""
-## Training
-"""
-
-inputs = keras.layers.Input(shape=(inputs.shape[1], inputs.shape[2]))
-lstm_out = keras.layers.LSTM(32)(inputs)
-outputs = keras.layers.Dense(1)(lstm_out)
-
-model = keras.Model(inputs=inputs, outputs=outputs)
-model.compile(optimizer=keras.optimizers.Adam(learning_rate=learning_rate), loss="mse")
-model.summary()
-
-"""
-We'll use the `ModelCheckpoint` callback to regularly save checkpoints, and
-the `EarlyStopping` callback to interrupt training when the validation loss
-is not longer improving.
-"""
-
-path_checkpoint = "model_checkpoint.weights.h5"
-es_callback = keras.callbacks.EarlyStopping(monitor="val_loss", min_delta=0, patience=5)
-
-modelckpt_callback = keras.callbacks.ModelCheckpoint(
-    monitor="val_loss",
-    filepath=path_checkpoint,
-    verbose=1,
-    save_weights_only=True,
-    save_best_only=True,
-)
-
-history = model.fit(
-    dataset_train,
-    epochs=epochs,
-    validation_data=dataset_val,
-    callbacks=[es_callback, modelckpt_callback],
-)
-
-"""
-We can visualize the loss with the function below. After one point, the loss stops
-decreasing.
-"""
-
-
-def visualize_loss(history, title):
-    loss = history.history["loss"]
-    val_loss = history.history["val_loss"]
-    epochs = range(len(loss))
-    plt.figure()
-    plt.plot(epochs, loss, "b", label="Training loss")
-    plt.plot(epochs, val_loss, "r", label="Validation loss")
-    plt.title(title)
-    plt.xlabel("Epochs")
-    plt.ylabel("Loss")
-    plt.legend()
-    plt.show()
-
-
-visualize_loss(history, "Training and Validation Loss")
-
-"""
-## Prediction
-
-The trained model above is now able to make predictions for 5 sets of values from
-validation set.
-"""
-
-
-def show_plot(plot_data, delta, title):
-    labels = ["History", "True Future", "Model Prediction"]
-    marker = [".-", "rx", "go"]
-    time_steps = list(range(-(plot_data[0].shape[0]), 0))
-    if delta:
-        future = delta
-    else:
-        future = 0
-
-    plt.title(title)
-    for i, val in enumerate(plot_data):
-        if i:
-            plt.plot(future, plot_data[i], marker[i], markersize=10, label=labels[i])
-        else:
-            plt.plot(time_steps, plot_data[i].flatten(), marker[i], label=labels[i])
-    plt.legend()
-    plt.xlim([time_steps[0], (future + 5) * 2])
-    plt.xlabel("Time-Step")
-    plt.show()
-    return
-
-
-for x, y in dataset_val.take(5):
-    show_plot(
-        [x[0][:, 1].numpy(), y[0].numpy(), model.predict(x)[0]],
-        12,
-        "Single Step Prediction",
-    )
+test_loss, test_acc = model.evaluate(test_X, test_y)
