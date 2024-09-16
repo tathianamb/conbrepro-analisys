@@ -5,56 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="17da7324-e4f3-496b-8f61-36e6cf4370bb" name="Changes" comment="changing script names">
-      <change afterPath="$PROJECT_DIR$/LOG-MODELLING.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_processed_acf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_processed_pacf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_processed_seasonal_decompose.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_processed_time_series.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_processed_acf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_processed_pacf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_processed_seasonal_decompose.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_processed_time_series.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_processed_acf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_processed_pacf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_processed_seasonal_decompose.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_processed_time_series.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_processed_acf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_processed_pacf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_processed_seasonal_decompose.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_processed_time_series.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/file-train_acf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/file-train_pacf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/file-train_time_series.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_selected_time_series.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_selected_time_series.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_selected_seasonal_decompose.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_selected_time_series.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/LOG-STATISTICALANALYSIS.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hybrid_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conbrepro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DATASET2023-INPUT/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_processed.csv" beforeDir="false" afterPath="$PROJECT_DIR$/DATASET2023-INPUT/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_selected.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DATASET2023-INPUT/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_processed.csv" beforeDir="false" afterPath="$PROJECT_DIR$/DATASET2023-INPUT/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_selected.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DATASET2023-INPUT/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_processed.csv" beforeDir="false" afterPath="$PROJECT_DIR$/DATASET2023-INPUT/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_selected.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DATASET2023-INPUT/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_processed.csv" beforeDir="false" afterPath="$PROJECT_DIR$/DATASET2023-INPUT/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_selected.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_processed_acf.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_selected_acf.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_processed_pacf.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_selected_pacf.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_processed_seasonal_decompose.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_selected_seasonal_decompose.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023_processed_time_series.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_processed_acf.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_selected_acf.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_processed_pacf.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_selected_pacf.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_processed_seasonal_decompose.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_selected_seasonal_decompose.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_CO_GO_A002_GOIANIA_01-01-2023_A_31-12-2023_processed_time_series.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_processed_acf.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_selected_acf.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_processed_pacf.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_selected_pacf.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_processed_seasonal_decompose.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_selected_seasonal_decompose.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_NE_CE_A305_FORTALEZA_01-01-2023_A_31-12-2023_processed_time_series.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_processed_acf.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_selected_acf.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_processed_pacf.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-RAWDATA/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_selected_pacf.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_processed_seasonal_decompose.png" beforeDir="false" afterPath="$PROJECT_DIR$/STATISTICALANALYSIS-DIFF1/file-train_seasonal_decompose.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/INMET_NE_PI_A312_TERESINA_01-01-2023_A_31-12-2023_processed_time_series.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/STATISTICALANALYSIS/LOG-STATISTICALANALYSIS.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arima_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/arima_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/process.py" beforeDir="false" afterPath="$PROJECT_DIR$/process.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,12 +30,12 @@
     &quot;assignee&quot;: &quot;tathianamb&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/tathianamb/conbrepro.git&quot;,
-    &quot;accountId&quot;: &quot;863bea12-5b54-428c-b0b2-487cedd4469f&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/tathianamb/conbrepro.git",
+    "accountId": "645d8ffc-1f94-4c03-9480-054443ef95bd"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -94,20 +47,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Python.preprocess.executor": "Run",
-    "Python.process.executor": "Run",
-    "Python.statisticalanalysis.executor": "Run",
-    "Python.utils.executor": "Debug",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/tathiana/PycharmProjects/conbrepro/DATASET2023/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023.csv",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "two.files.diff.last.used.file": "/home/tathiana/PycharmProjects/conbrepro/DATASET2023/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023.csv"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Python.preprocess.executor&quot;: &quot;Run&quot;,
+    &quot;Python.process.executor&quot;: &quot;Run&quot;,
+    &quot;Python.statisticalanalysis.executor&quot;: &quot;Run&quot;,
+    &quot;Python.utils.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/tathiana/PycharmProjects/conbrepro/DATASET2023/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023.csv&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;/home/tathiana/PycharmProjects/conbrepro/DATASET2023/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023.csv&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/STATISTICALANALYSIS" />
@@ -214,7 +167,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-ce3d9afa04ac-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.20224.347" />
+        <option value="bundled-python-sdk-975db3bf15a3-31b6be0877a2-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.18034.82" />
       </set>
     </attachedChunks>
   </component>
