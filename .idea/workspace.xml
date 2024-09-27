@@ -4,16 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17da7324-e4f3-496b-8f61-36e6cf4370bb" name="Changes" comment="add">
-      <change afterPath="$PROJECT_DIR$/publications_per_year.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scopus.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webofscience.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webofscience.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="17da7324-e4f3-496b-8f61-36e6cf4370bb" name="Changes" comment="v1">
+      <change afterPath="$PROJECT_DIR$/all_data.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/all_data_filtered_normalized.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alldata.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alldata_prepared.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/collaboration_network.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prepare_data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preprocess.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/savedrecs.bib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/savedrecs.ris" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/savedrecs.ris.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scopus.bib" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scopus.ris" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scopus.ris.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/export.bib" beforeDir="false" afterPath="$PROJECT_DIR$/export.bib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/publications_per_year.png" beforeDir="false" afterPath="$PROJECT_DIR$/publications_per_year.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scopus.csv" beforeDir="false" afterPath="$PROJECT_DIR$/scopus.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webofscience.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,27 +63,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.preprocess.executor&quot;: &quot;Run&quot;,
-    &quot;Python.process.executor&quot;: &quot;Run&quot;,
-    &quot;Python.statisticalanalysis.executor&quot;: &quot;Run&quot;,
-    &quot;Python.utils.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/tathiana/PycharmProjects/conbrepro/DATASET2023/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023.csv&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;two.files.diff.last.used.file&quot;: &quot;/home/tathiana/PycharmProjects/conbrepro/DATASET2023/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023.csv&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python.main.executor": "Run",
+    "Python.prepare_data.executor": "Run",
+    "Python.preprocess.executor": "Run",
+    "Python.process.executor": "Run",
+    "Python.ris2csv.executor": "Run",
+    "Python.statisticalanalysis.executor": "Run",
+    "Python.utils.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/tathiana/PycharmProjects/conbrepro/DATASET2023/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023.csv",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "two.files.diff.last.used.file": "/home/tathiana/PycharmProjects/conbrepro/DATASET2023/INMET_CO_DF_A001_BRASILIA_01-01-2023_A_31-12-2023.csv"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Tathiana\PycharmProjects\conbrepro" />
+      <recent name="C:\Users\Tathiana\PycharmProjects\conbrepro\raw_data" />
       <recent name="$PROJECT_DIR$/STATISTICALANALYSIS" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
+  <component name="RunManager" selected="Python.preprocess">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="conbrepro" />
       <option name="ENV_FILES" value="" />
@@ -97,6 +110,50 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="prepare_data" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="conbrepro" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Tathiana\PycharmProjects\conbrepro\prepare_data.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="preprocess" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="conbrepro" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/preprocess.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="process" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="conbrepro" />
       <option name="ENV_FILES" value="" />
@@ -111,50 +168,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/process.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="selectdata" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="conbrepro" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/selectdata.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="statisticalanalysis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="conbrepro" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/statisticalanalysis.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -187,11 +200,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.preprocess" />
+        <item itemvalue="Python.prepare_data" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.process" />
         <item itemvalue="Python.utils" />
-        <item itemvalue="Python.statisticalanalysis" />
-        <item itemvalue="Python.selectdata" />
       </list>
     </recent_temporary>
   </component>
@@ -443,7 +456,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726505293202</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="v1">
+      <option name="closed" value="true" />
+      <created>1726578053799</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1726578053799</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -459,7 +480,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="coding preprocess" />
     <MESSAGE value="data" />
     <MESSAGE value="fixed values" />
     <MESSAGE value="Remover a conversão de dados em formato específico para o campo de radiação global diretamente após a leitura.&#10;Substituir valores '////' por pd.NA e tratar valores faltantes com preenchimento por zero, garantindo a integridade dos dados.&#10;Criar uma nova coluna datetime combinando data e hora, convertendo para o formato '%Y-%m-%d %H:%M:%S', e usar como índice do DataFrame.&#10;Excluir as colunas originais data e hora após criar a coluna datetime.&#10;Ajustar o salvamento do arquivo processado para incluir o índice datetime no arquivo CSV.&#10;Corrigido o tratamento de valores e a conversão de tipos para garantir que os dados sejam mais precisos e fáceis de analisar." />
@@ -484,6 +504,7 @@
     <MESSAGE value="changing script names" />
     <MESSAGE value="changing project" />
     <MESSAGE value="add" />
-    <option name="LAST_COMMIT_MESSAGE" value="add" />
+    <MESSAGE value="v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1" />
   </component>
 </project>

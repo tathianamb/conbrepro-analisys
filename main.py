@@ -4,16 +4,12 @@ from sklearn.feature_extraction.text import CountVectorizer
 import matplotlib.pyplot as plt
 import seaborn as sns
 import networkx as nx
-
-
-def standardize_columns(df):
-    df.columns = [col.lower() for col in df.columns]
-    return df
+from itertools import combinations
 
 
 # 5.1.1 Evolução Temporal: Número de publicações por ano
 def plot_publications_per_year(df):
-    yearly_publications = df.groupby('year').size()
+    yearly_publications = df.groupby('Year').size()
     plt.figure(figsize=(10, 6))
     sns.barplot(x=yearly_publications.index, y=yearly_publications.values, color='skyblue')
     plt.title('Distribuição de Publicações por Ano')
@@ -26,12 +22,12 @@ def plot_publications_per_year(df):
 # 5.1.2 Principais Autores: Lista dos autores com maior número de publicações e citações
 def top_authors(df, top_n=10):
     # Verifique se a coluna 'author' está presente
-    if 'author full names' not in df.columns:
+    if 'Author Full Names' not in df.columns:
         raise KeyError("A coluna 'author' não foi encontrada no DataFrame.")
 
     all_authors = []
 
-    for authors in df['author full names']:
+    for authors in df['Author Full Names']:
         all_authors.extend([author.strip() for author in authors.split(';')])
 
     author_counts = pd.Series(all_authors).value_counts().head(top_n)
@@ -43,42 +39,71 @@ def top_authors(df, top_n=10):
 
 # 5.1.3 Instituições: Principais contribuintes
 def top_institutions(df, top_n=10):
-    affiliations = df['affiliations'].str.split(';').explode()
+    affiliations = df['Affiliations'].str.split(';').explode()
     affiliations = affiliations.str.split(',')
     return affiliations.value_counts().head(top_n)
 
 
 # 5.1.4 Periódicos e Conferências: Veículos de publicação mais relevantes
 def top_journals(df, top_n=10):
-    return df['source title'].value_counts().head(top_n)
+    return df['Source Title'].value_counts().head(top_n)
 
 
 # 5.2 Análise de Citação
 
 # 5.2.1 Artigos Mais Citados
 def most_cited_papers(df, top_n=10):
-    most_cited = df.sort_values('cited', ascending=False).head(top_n)
-    return most_cited[['title', 'authors', 'cited']]
+    most_cited = df.sort_values('Cited', ascending=False).head(top_n)
+    return most_cited[['Title', 'Author Full Names', 'Cited']]
 
 
 # 5.2.2 Análise de Co-citação
 def co_citation_analysis(df):
-    co_citations = df.groupby('title')['citation_count'].apply(list)
+    co_citations = df.groupby('Title')['citation_count'].apply(list)
     # Implementar lógica de co-citação e criar gráfico de rede
     pass
 
 
 # 5.3 Análise de Redes de Colaboração
+def collaboration_network(df, coluna_autores='Author Full Names'):
+    G = nx.Graph()
 
+    for autores in df[coluna_autores].dropna():
+        lista_autores = [autor.strip() for autor in autores.split(';')]
+
+        for autor1, autor2 in combinations(lista_autores, 2):
+            if G.has_edge(autor1, autor2):
+                G[autor1][autor2]['weight'] += 1
+            else:
+                G.add_edge(autor1, autor2, weight=1)
+
+    print(f"Número de nós (autores): {G.number_of_nodes()}")
+    print(f"Número de arestas (colaborações): {G.number_of_edges()}")
+
+    centralidade_grau = nx.degree_centrality(G)
+
+    top_autores = sorted(centralidade_grau.items(), key=lambda x: x[1], reverse=True)[:10]
+    print("Top 10 autores mais colaborativos:")
+    for autor, centralidade in top_autores:
+        print(f"{autor}: {centralidade:.4f}")
+
+    plt.figure(figsize=(12, 12))
+    pos = nx.spring_layout(G, k=0.5, seed=42)  # Layout para a visualização da rede
+    nx.draw_networkx_nodes(G, pos, node_size=50, node_color='blue', alpha=0.6)
+    nx.draw_networkx_edges(G, pos, width=[d['weight'] for (u, v, d) in G.edges(data=True)], alpha=0.6)
+    nx.draw_networkx_labels(G, pos, font_size=8, font_color='black')
+    plt.title("Rede de Colaboração entre Autores", size=15)
+    plt.savefig('collaboration_network.png', format='png')
+    plt.close()
 
 # 5.4.1 Palavras-chave Mais Frequentes
 def most_frequent_keywords(df, top_n=10):
-    keywords = df['keywords'].str.lower().str.split(';').explode()
+    keywords = df['Keywords'].str.lower().str.split(';').explode()
     common_keywords = keywords.value_counts().head(top_n)
     return common_keywords
 
 # 5.4.2 Análise de Coocorrência
-def analyze_cooccurrence(df, text_column='abstract'):
+def analyze_cooccurrence(df, text_column='Abstract'):
     def preprocess_text(text):
         return text.lower()
 
@@ -110,7 +135,7 @@ def analyze_cooccurrence(df, text_column='abstract'):
 def run_bibliometric_analysis(df):
     plot_publications_per_year(df)
 
-    print(f"\nTop Institutions:\n{top_authors(df)}")
+    print(f"\nTop Authors:\n{top_authors(df)}")
 
     print(f"\nTop Institutions:\n{top_institutions(df)}")
 
@@ -118,44 +143,15 @@ def run_bibliometric_analysis(df):
 
     print(f"\nMost Cited Papers:\n{most_cited_papers(df)}")
 
-    #collaboration_network(df)
+    collaboration_network(df)
 
     print(f"\nMost Frequent Keywords:\n{most_frequent_keywords(df)}")
 
     #analyze_cooccurrence(df, 'abstract')
 
 
-def bib_to_dataframe(bib_file):
-    try:
-        with open(bib_file, 'r', encoding='utf-8') as file:
-            bib_data = file.read()
-    except UnicodeDecodeError:
-        with open(bib_file, 'r', encoding='latin1') as file:
-            bib_data = file.read()
-
-    bib_database = bibtexparser.bparser.BibTexParser().parse(bib_data)
-    entries = bib_database.entries
-    df = pd.DataFrame(entries)
-
-    return df
-
 if __name__ == "__main__":
-    scopus_df = pd.read_csv('scopus.csv')
-    webofscience_df = pd.read_csv('webofscience.csv')
-
-    scopus_df = standardize_columns(scopus_df)
-    #print(scopus_df.columns)
-    webofscience_df = standardize_columns(webofscience_df)
-    #print(webofscience_df.columns)
-    scopus_columns = set(scopus_df.columns)
-    webofscience_columns = set(webofscience_df.columns)
-
-    common_columns = scopus_columns.intersection(webofscience_columns)
-
-    scopus_df_filtered = scopus_df[list(common_columns)]
-    webofscience_df_filtered = webofscience_df[list(common_columns)]
-
-    df = pd.concat([scopus_df_filtered, webofscience_df_filtered], ignore_index=True)
+    df = pd.read_csv('all_data_filtered_normalized.csv')
 
     print(df.columns)
 
