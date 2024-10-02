@@ -4,21 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17da7324-e4f3-496b-8f61-36e6cf4370bb" name="Changes" comment="v1 of scientometric analysis">
-      <change afterPath="$PROJECT_DIR$/chart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keyword_class_chart.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/keywords_class.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newplot (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wordcloud_analyze_cooccurrence.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wordcloud_analyze_freq.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wordcloud_keywords.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/all_data_prepared.csv" beforeDir="false" afterPath="$PROJECT_DIR$/all_data_prepared.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newplot.png" beforeDir="false" afterPath="$PROJECT_DIR$/newplot.png" afterDir="false" />
+    <list default="true" id="17da7324-e4f3-496b-8f61-36e6cf4370bb" name="Changes" comment="v2 of scientometric analysis">
       <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wordcloud.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -458,7 +445,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727801084045</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="v2 of scientometric analysis">
+      <option name="closed" value="true" />
+      <created>1727909358557</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1727909358557</updated>
+    </task>
+    <task id="LOCAL-00034" summary="v2 of scientometric analysis">
+      <option name="closed" value="true" />
+      <created>1727909396032</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1727909396032</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -474,7 +477,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Remover a conversão de dados em formato específico para o campo de radiação global diretamente após a leitura.&#10;Substituir valores '////' por pd.NA e tratar valores faltantes com preenchimento por zero, garantindo a integridade dos dados.&#10;Criar uma nova coluna datetime combinando data e hora, convertendo para o formato '%Y-%m-%d %H:%M:%S', e usar como índice do DataFrame.&#10;Excluir as colunas originais data e hora após criar a coluna datetime.&#10;Ajustar o salvamento do arquivo processado para incluir o índice datetime no arquivo CSV.&#10;Corrigido o tratamento de valores e a conversão de tipos para garantir que os dados sejam mais precisos e fáceis de analisar." />
     <MESSAGE value="updating folder name" />
     <MESSAGE value="add statistical analysis files" />
     <MESSAGE value="add statistical analysis script" />
@@ -499,6 +501,7 @@
     <MESSAGE value="v1" />
     <MESSAGE value="v0 of scientometric analysis" />
     <MESSAGE value="v1 of scientometric analysis" />
-    <option name="LAST_COMMIT_MESSAGE" value="v1 of scientometric analysis" />
+    <MESSAGE value="v2 of scientometric analysis" />
+    <option name="LAST_COMMIT_MESSAGE" value="v2 of scientometric analysis" />
   </component>
 </project>

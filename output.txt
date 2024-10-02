@@ -83,6 +83,7 @@ Most Cited Papers:
 573                           Zhang, D; Lin, JQ; Peng, QD; Wang, DS; Yang, TT; Sorooshian, S; Liu, XF; Zhuang, JB         Modeling and simulating of reservoir operation using the artificial neural network, support vector regression, deep learning algorithm  2018                                                                 JOURNAL OF HYDROLOGY  10.1016/j.jhydrol.2018.08.050           224
 565                                                                         Shamshirband, S; Rabczuk, T; Chau, KW                                                           A Survey of Deep Learning Techniques: Application in Wind and Solar Energy Resources  2019                                                                          IEEE ACCESS    10.1109/ACCESS.2019.2951750           207
 421  Abdolrasol, MGM; Hussain, SMS; Ustun, TS; Sarker, MR; Hannan, MA; Mohamed, R; Ali, JA; Mekhilef, S; Milad, A                                                                             Artificial Neural Networks Based Optimization Techniques: A Review  2021                                                                          ELECTRONICS    10.3390/electronics10212689           194
+Quantidade de palavras-chave: 12635
 
 Most Frequent Keywords:
 KW
@@ -141,8 +142,8 @@ Analyze Cooccurrence:
            Palavra
 16417         year
 16370         work
-16359       within
 16331         wind
+16327         will
 16277         well
 16215        water
 16085      vehicle
@@ -154,11 +155,11 @@ Analyze Cooccurrence:
 15969          use
 15879         unit
 15767          two
-15742      turbine
 15605  traditional
 15492         time
 15464        three
-15425      thermal
+15354  temperature
+15344   technology
 
 Analyze Frequency:
            Palavra
