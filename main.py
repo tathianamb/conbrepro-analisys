@@ -61,7 +61,7 @@ def co_citation_analysis(df):
 
 def most_frequent_keywords(df, top_n=10):
     keywords = df['KW'].str.lower().str.split(';').explode().str.strip()
-    print(f"Quantidade de palavras-chave: {len(keywords)}")
+    print(f"Quantidade de palavras-chave: {len(keywords)}", file=f)
     common_keywords = keywords.value_counts().head(top_n)
     return common_keywords
 
