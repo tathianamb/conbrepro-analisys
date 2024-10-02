@@ -1,3 +1,19 @@
+
+Publications per year:
+PY
+2014      8
+2015     17
+2016     23
+2017     25
+2018     21
+2019     45
+2020     55
+2021     99
+2022    111
+2023    196
+2024    219
+dtype: int64
+
 Top Authors:
            Publicações
 Li, YZ              19
@@ -37,7 +53,7 @@ Applied Energy                                         14
 ELECTRONICS                                            14
 Energy                                                 13
 
-Top Journals:
+Top Countries:
 Country
 China           622
 India           279
@@ -70,13 +86,99 @@ Most Cited Papers:
 
 Most Frequent Keywords:
 KW
-optimization                  322
-artificial intelligence       310
-renewable energy              170
-machine learning               93
-renewable energy sources       82
-renewable energy resources     81
-algorithm                      73
-energy management              70
-microgrid                      63
-smart grid                     63
+optimization                         322
+artificial intelligence              310
+renewable energy                     170
+machine learning                      93
+renewable energy sources              82
+renewable energy resources            81
+algorithm                             73
+energy management                     70
+microgrid                             63
+smart grid                            63
+renewable energies                    62
+model                                 60
+optimisations                         59
+renewable energy source               58
+energy                                57
+deep learning                         51
+wind power                            50
+energy efficiency                     50
+solar energy                          48
+reinforcement learning                48
+design                                45
+performance                           45
+particle swarm optimization           44
+energy storage                        43
+demand response                       42
+system                                42
+microgrids                            41
+particle swarm optimization (pso)     41
+forecasting                           41
+power                                 40
+multiobjective optimization           39
+decision making                       38
+management                            37
+costs                                 37
+prediction                            36
+smart power grids                     35
+genetic algorithms                    35
+generation                            35
+ant colony optimization               34
+uncertainty                           33
+genetic algorithm                     33
+simulation                            31
+energy management systems             30
+electric vehicles                     30
+neural-network                        29
+artificial neural network             29
+wind                                  28
+operation                             28
+solar power generation                28
+neural networks                       27
+
+Analyze Cooccurrence:
+           Palavra
+16417         year
+16370         work
+16359       within
+16331         wind
+16277         well
+16215        water
+16085      vehicle
+16075      various
+16053     variable
+16041        value
+15995        using
+15973         used
+15969          use
+15879         unit
+15767          two
+15742      turbine
+15605  traditional
+15492         time
+15464        three
+15425      thermal
+
+Analyze Frequency:
+           Palavra
+16370         work
+16359       within
+16331         wind
+16327         will
+16277         well
+16215        water
+16167      voltage
+16075      various
+16053     variable
+16041        value
+15995        using
+15973         used
+15969          use
+15879         unit
+15818  uncertainty
+15767          two
+15605  traditional
+15565        total
+15542         tool
+15492         time

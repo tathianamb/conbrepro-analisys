@@ -40,9 +40,17 @@ def extract_institution_country(addresses):
     return ';'.join(institutions), ';'.join(countries)
 
 
+def extrair_numero_citacoes(citacao):
+    match = re.search(r'(?:Cited By|Times Cited).*?(\d+)', citacao)
+    if match:
+        return int(match.group(1))
+    return 0
+
 
 df = pd.read_csv('all_data.csv')
 
 df[['Institution', 'Country']] = df['AD'].apply(extract_institution_country).apply(pd.Series)
+
+df['Num_Citacoes'] = df['N1'].apply(extrair_numero_citacoes)
 
 df.to_csv('all_data_prepared.csv', index=False)

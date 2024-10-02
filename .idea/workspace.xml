@@ -4,20 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17da7324-e4f3-496b-8f61-36e6cf4370bb" name="Changes" comment="v0 of scientometric analysis">
-      <change afterPath="$PROJECT_DIR$/all_data.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/all_data_prepared.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cooccurrence_network.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newplot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/publications_per_year.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/savedrecs.ris.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scopus.ris.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wordcloud.png" afterDir="false" />
+    <list default="true" id="17da7324-e4f3-496b-8f61-36e6cf4370bb" name="Changes" comment="v1 of scientometric analysis">
+      <change afterPath="$PROJECT_DIR$/chart.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keyword_class_chart.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/keywords_class.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/newplot (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wordcloud_analyze_cooccurrence.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wordcloud_analyze_freq.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wordcloud_keywords.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_data_prepared.csv" beforeDir="false" afterPath="$PROJECT_DIR$/all_data_prepared.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prepare_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/ris2csv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newplot.png" beforeDir="false" afterPath="$PROJECT_DIR$/newplot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocess.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wordcloud.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +62,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Python.keyword_class_chart.executor": "Run",
     "Python.main.executor": "Run",
     "Python.prepare_data.executor": "Run",
     "Python.preprocess.executor": "Run",
@@ -87,6 +89,28 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
+    <configuration name="keyword_class_chart" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="conbrepro" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/keyword_class_chart.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="conbrepro" />
       <option name="ENV_FILES" value="" />
@@ -156,6 +180,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.keyword_class_chart" />
         <item itemvalue="Python.preprocess" />
         <item itemvalue="Python.ris2csv" />
       </list>
@@ -425,7 +450,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727459985185</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="v1 of scientometric analysis">
+      <option name="closed" value="true" />
+      <created>1727801084045</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1727801084045</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -441,7 +474,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fixed values" />
     <MESSAGE value="Remover a conversão de dados em formato específico para o campo de radiação global diretamente após a leitura.&#10;Substituir valores '////' por pd.NA e tratar valores faltantes com preenchimento por zero, garantindo a integridade dos dados.&#10;Criar uma nova coluna datetime combinando data e hora, convertendo para o formato '%Y-%m-%d %H:%M:%S', e usar como índice do DataFrame.&#10;Excluir as colunas originais data e hora após criar a coluna datetime.&#10;Ajustar o salvamento do arquivo processado para incluir o índice datetime no arquivo CSV.&#10;Corrigido o tratamento de valores e a conversão de tipos para garantir que os dados sejam mais precisos e fáceis de analisar." />
     <MESSAGE value="updating folder name" />
     <MESSAGE value="add statistical analysis files" />
@@ -466,6 +498,7 @@
     <MESSAGE value="add" />
     <MESSAGE value="v1" />
     <MESSAGE value="v0 of scientometric analysis" />
-    <option name="LAST_COMMIT_MESSAGE" value="v0 of scientometric analysis" />
+    <MESSAGE value="v1 of scientometric analysis" />
+    <option name="LAST_COMMIT_MESSAGE" value="v1 of scientometric analysis" />
   </component>
 </project>
