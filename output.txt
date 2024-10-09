@@ -42,16 +42,16 @@ King Abdulaziz Univ                12
 
 Top Journals:
 T2
-IEEE ACCESS                                            52
-ENGINEERING APPLICATIONS OF ARTIFICIAL INTELLIGENCE    33
-APPLIED ENERGY                                         30
-Energies                                               26
-IEEE Access                                            22
-JOURNAL OF CLEANER PRODUCTION                          17
-IEEE TRANSACTIONS ON INDUSTRIAL INFORMATICS            14
-Applied Energy                                         14
-ELECTRONICS                                            14
-Energy                                                 13
+ieee access                                                   74
+applied energy                                                44
+engineering applications of artificial intelligence           33
+energies                                                      26
+journal of cleaner production                                 22
+ieee transactions on industrial informatics                   18
+electronics                                                   14
+energy                                                        13
+process safety and environmental protection                   13
+international journal of electrical power & energy systems    13
 
 Top Countries:
 Country
@@ -83,103 +83,134 @@ Most Cited Papers:
 573                           Zhang, D; Lin, JQ; Peng, QD; Wang, DS; Yang, TT; Sorooshian, S; Liu, XF; Zhuang, JB         Modeling and simulating of reservoir operation using the artificial neural network, support vector regression, deep learning algorithm  2018                                                                 JOURNAL OF HYDROLOGY  10.1016/j.jhydrol.2018.08.050           224
 565                                                                         Shamshirband, S; Rabczuk, T; Chau, KW                                                           A Survey of Deep Learning Techniques: Application in Wind and Solar Energy Resources  2019                                                                          IEEE ACCESS    10.1109/ACCESS.2019.2951750           207
 421  Abdolrasol, MGM; Hussain, SMS; Ustun, TS; Sarker, MR; Hannan, MA; Mohamed, R; Ali, JA; Mekhilef, S; Milad, A                                                                             Artificial Neural Networks Based Optimization Techniques: A Review  2021                                                                          ELECTRONICS    10.3390/electronics10212689           194
-Quantidade de palavras-chave: 12635
 
-Most Frequent Keywords:
-KW
-optimization                         322
-artificial intelligence              310
-renewable energy                     170
-machine learning                      93
-renewable energy sources              82
-renewable energy resources            81
-algorithm                             73
-energy management                     70
-microgrid                             63
-smart grid                            63
-renewable energies                    62
-model                                 60
-optimisations                         59
-renewable energy source               58
-energy                                57
-deep learning                         51
-wind power                            50
-energy efficiency                     50
-solar energy                          48
-reinforcement learning                48
-design                                45
-performance                           45
-particle swarm optimization           44
-energy storage                        43
-demand response                       42
-system                                42
-microgrids                            41
-particle swarm optimization (pso)     41
-forecasting                           41
-power                                 40
-multiobjective optimization           39
-decision making                       38
-management                            37
-costs                                 37
-prediction                            36
-smart power grids                     35
-genetic algorithms                    35
-generation                            35
-ant colony optimization               34
-uncertainty                           33
-genetic algorithm                     33
-simulation                            31
-energy management systems             30
-electric vehicles                     30
-neural-network                        29
-artificial neural network             29
-wind                                  28
-operation                             28
-solar power generation                28
-neural networks                       27
+Word Frequency - Abstract:
+           Palavra  count
+4814        energy   2722
+7312         power   1505
+8769        system   1222
+6936  optimization   1047
+3295         based    890
+7873     renewable    879
+7523      proposed    812
+8773       systems    756
+6569         model    737
+4240          data    578
+2966     algorithm    574
+4056       control    526
+7971       results    505
+7135   performance    497
+3141    artificial    479
+5939  intelligence    478
+7051         paper    467
+5499          grid    465
+9431          wind    464
+6496        method    454
 
-Analyze Cooccurrence:
-           Palavra
-16417         year
-16370         work
-16331         wind
-16327         will
-16277         well
-16215        water
-16085      vehicle
-16075      various
-16053     variable
-16041        value
-15995        using
-15973         used
-15969          use
-15879         unit
-15767          two
-15605  traditional
-15492         time
-15464        three
-15354  temperature
-15344   technology
+Publications per year:
+PY
+2014      8
+2015     17
+2016     23
+2017     25
+2018     21
+2019     45
+2020     55
+2021     99
+2022    111
+2023    196
+2024    219
+dtype: int64
 
-Analyze Frequency:
-           Palavra
-16370         work
-16359       within
-16331         wind
-16327         will
-16277         well
-16215        water
-16167      voltage
-16075      various
-16053     variable
-16041        value
-15995        using
-15973         used
-15969          use
-15879         unit
-15818  uncertainty
-15767          two
-15605  traditional
-15565        total
-15542         tool
-15492         time
+Top Authors:
+           Publicações
+Li, YZ              19
+Zhao, TY            10
+Liu, Y              10
+Khalid, M            9
+Wu, L                8
+Li, X                8
+Shi, Y               8
+Kumar, A             8
+Kamel, S             8
+Ni, ZX               8
+
+Top Institutions:
+Institution
+Huazhong Univ Sci & Technol        76
+King Fahd Univ Petr & Minerals     40
+Nanjing Univ Posts & Telecommun    17
+Univ Sharjah                       15
+Tsinghua Univ                      15
+Chinese Univ Hong Kong             15
+Indian Inst Technol Delhi          14
+North China Elect Power Univ       14
+Nanyang Technol Univ               13
+King Abdulaziz Univ                12
+
+Top Journals:
+T2
+ieee access                                                   74
+applied energy                                                44
+engineering applications of artificial intelligence           33
+energies                                                      26
+journal of cleaner production                                 22
+ieee transactions on industrial informatics                   18
+electronics                                                   14
+energy                                                        13
+process safety and environmental protection                   13
+international journal of electrical power & energy systems    13
+
+Top Countries:
+Country
+China           622
+India           279
+Saudi Arabia    226
+USA             137
+Egypt           110
+Malaysia         80
+South Korea      63
+Pakistan         59
+Taiwan           57
+Iran             55
+Australia        54
+Iraq             46
+Spain            41
+Mexico           34
+Canada           32
+
+Most Cited Papers:
+                                                                                                               AU                                                                                                                                             TI    PY                                                                                   T2                             DO  Num_Citacoes
+263                                                  Bhandari, B.; Lee, K.-T.; Lee, G.-Y.; Cho, Y.-M.; Ahn, S.-H.                                                                                Optimization of hybrid renewable energy power systems: A review  2015  International Journal of Precision Engineering and Manufacturing - Green Technology      10.1007/s40684-015-0013-z           295
+305                                         Ahmad, T; Zhang, DD; Huang, C; Zhang, HC; Dai, NY; Song, YH; Chen, HX                                               Artificial intelligence in sustainable energy industry: Status Quo, challenges and opportunities  2021                                                        JOURNAL OF CLEANER PRODUCTION  10.1016/j.jclepro.2021.125834           268
+203                              Rahim, S.; Javaid, N.; Ahmad, A.; Khan, S.A.; Khan, Z.A.; Alrajeh, N.; Qasim, U.                             Exploiting heuristic algorithms to efficiently utilize energy management controllers with renewable energy sources  2016                                                                 Energy and Buildings  10.1016/j.enbuild.2016.08.008           263
+245                                                                          Wei, Y.; Yu, F.R.; Song, M.; Han, Z.                  User Scheduling and Resource Allocation in HetNets with Hybrid Energy Supply: An Actor-Critic Reinforcement Learning Approach  2018                                         IEEE Transactions on Wireless Communications       10.1109/TWC.2017.2769644           262
+636                                                                 Akhter, MN; Mekhilef, S; Mokhlis, H; Shah, NM                                  Review on forecasting of photovoltaic power generation based on machine learning and metaheuristic techniques  2019                                                       IET RENEWABLE POWER GENERATION      10.1049/iet-rpg.2018.5649           241
+746                  Seyedmahmoudian, M; Rahmani, R; Mekhilef, S; Oo, AMT; Stojcevski, A; Soon, TK; Ghandhari, AS  Simulation and Hardware Implementation of New Maximum Power Point Tracking Technique for Partially Shaded PV System Using Hybrid DEPSO Method  2015                                              IEEE TRANSACTIONS ON SUSTAINABLE ENERGY      10.1109/TSTE.2015.2413359           228
+290                                                              Bhandari, B; Lee, KT; Lee, GY; Chou, YM; Ahn, SH                                                                                Optimization of Hybrid Renewable Energy Power Systems: A Review  2015    INTERNATIONAL JOURNAL OF PRECISION ENGINEERING AND MANUFACTURING-GREEN TECHNOLOGY      10.1007/s40684-015-0013-z           224
+573                           Zhang, D; Lin, JQ; Peng, QD; Wang, DS; Yang, TT; Sorooshian, S; Liu, XF; Zhuang, JB         Modeling and simulating of reservoir operation using the artificial neural network, support vector regression, deep learning algorithm  2018                                                                 JOURNAL OF HYDROLOGY  10.1016/j.jhydrol.2018.08.050           224
+565                                                                         Shamshirband, S; Rabczuk, T; Chau, KW                                                           A Survey of Deep Learning Techniques: Application in Wind and Solar Energy Resources  2019                                                                          IEEE ACCESS    10.1109/ACCESS.2019.2951750           207
+421  Abdolrasol, MGM; Hussain, SMS; Ustun, TS; Sarker, MR; Hannan, MA; Mohamed, R; Ali, JA; Mekhilef, S; Milad, A                                                                             Artificial Neural Networks Based Optimization Techniques: A Review  2021                                                                          ELECTRONICS    10.3390/electronics10212689           194
+
+Word Frequency - Abstract:
+           Palavra  count
+4814        energy   2722
+7312         power   1505
+8769        system   1222
+6936  optimization   1047
+3295         based    890
+7873     renewable    879
+7523      proposed    812
+8773       systems    756
+6569         model    737
+4240          data    578
+2966     algorithm    574
+4056       control    526
+7971       results    505
+7135   performance    497
+3141    artificial    479
+5939  intelligence    478
+7051         paper    467
+5499          grid    465
+9431          wind    464
+6496        method    454

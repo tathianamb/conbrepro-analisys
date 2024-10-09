@@ -1,0 +1,1564 @@
+id	label
+1	ai-powered energy optimization
+2	energy optimization
+3	energy supply
+4	home energy management systems
+5	meta-heuristic algorithms
+6	meta-heuristics algorithms
+7	optimisations
+8	peak average ratio
+9	sand cat swarm optimization
+10	siberian tiger optimization
+11	siberian tigers
+12	sustainable energy
+13	sustainable energy efficiency
+14	swarm optimization
+15	alternative energy
+16	carbon
+17	carbon-free
+18	climate change
+19	climate change vulnerability assessment
+20	distribution planning
+21	economics
+22	electricity
+23	electricity supply
+24	energy distributions
+25	energy planning
+26	flexible energy planning
+27	forecasting
+28	gas emissions
+29	genetic algorithm
+30	genetic algorithms
+31	greenhouse gas
+32	greenhouse gases
+33	natural resources
+34	renewable energies
+35	renewable energy resources
+36	renewable energy source
+37	renewable energy sources
+38	spatio-temporal prediction
+39	spatiotemporal prediction
+40	vulnerability
+41	vulnerability assessments
+42	artificial intelligence
+43	artificial intelligence techniques
+44	bibliometric analysis
+45	bibliometric indicators
+46	bibliometrics analysis
+47	deep learning
+48	energy analysis
+49	energy conservation
+50	fuel cells
+51	fuzzy logic
+52	fuzzy neural networks
+53	iterative methodology
+54	iterative methods
+55	machine learning
+56	machine-learning
+57	multiobjective optimization
+58	paper analysis
+59	particle swarm optimization (pso)
+60	reinforcement learning
+61	renewable energy
+62	smart power grids
+63	solar energy
+64	solar power generation
+65	support vector machines
+66	sustainability
+67	tech mining
+68	tech minings
+69	wind power
+70	computer circuits
+71	controllers
+72	conventional techniques
+73	energy harvesting
+74	fuzzy inference
+75	fuzzy logic control
+76	maximum power point trackers
+77	maximum power point tracking
+78	maximum power point tracking techniques
+79	mppt techniques
+80	particle swam optimization
+81	performance
+82	perturb and observe
+83	smart grid
+84	solar energy conversion
+85	tracking (position)
+86	adaptive neuro-fuzzy inference
+87	adaptive neuro-fuzzy inference system
+88	adaptive neuro-fuzzy inference systems
+89	artificial neural networks
+90	decision trees
+91	energy prediction
+92	fuzzy systems
+93	learning systems
+94	machine learning methods
+95	mean absolute error
+96	neuro-fuzzy inference systems
+97	optimization
+98	percentage error
+99	support vectors machine
+100	wind energy prediction
+101	wind speed
+102	(dc–dc) current-fed bridge converter
+103	(dc–dc) current-feed bridge converter
+104	ann
+105	asymptotic stability
+106	battery
+107	bi-directional power converter
+108	bridge converter
+109	charging (batteries)
+110	current fed
+111	electric discharges
+112	electric machine control
+113	electric power system control
+114	electric rectifiers
+115	energy storage
+116	ev
+117	ev's
+118	hardware in the loops
+119	hil
+120	i-gwo
+121	neural networks
+122	photovoltaics
+123	plug-in hybrid electric vehicle
+124	plug-in hybrid vehicles
+125	power converters
+126	pv
+127	sc
+128	secondary batteries
+129	sliding mode control
+130	supercapacitor
+131	transient analysis
+132	artificial intelligence.
+133	biomass
+134	carbon and water footprint
+135	cogeneration systems
+136	efficiency
+137	electrophysiology
+138	energy
+139	energy demands
+140	energy utilization
+141	impact
+142	municipal solid waste
+143	poly-generation
+144	polygeneration
+145	polygeneration system
+146	power plants
+147	r-curve
+148	r-curves
+149	solar and biomass integration
+150	systems
+151	waste papers
+152	water footprint
+153	adversarial machine learning
+154	agricultural smart system
+155	aquaponic
+156	aquaponics
+157	fish farming
+158	fish species
+159	hydroponics
+160	innovative approaches
+161	internet of things
+162	learning frameworks
+163	smart system
+164	sustainable systems
+165	applications
+166	cyber security
+167	cybersecurity
+168	electric power distribution
+169	energy efficiency
+170	future perspectives
+171	grid resilience
+172	interactive computer systems
+173	power systems reliability
+174	real - time system
+175	real time systems
+176	regulatory compliance
+177	resilience
+178	software defined networking
+179	software reliability
+180	software-defined network
+181	software-defined networkings
+182	software-defined networks
+183	convolution
+184	convolutional neural network
+185	convolutional neural networks
+186	decision making
+187	decision-making method
+188	decisions makings
+189	deep bidirectional long-short memory neural network
+190	deep neural networks
+191	electric load dispatching
+192	integer programming
+193	long short-term memory
+194	microgrid
+195	microgrids
+196	neural-networks
+197	optimal dispatch
+198	optimal scheduling
+199	scheduling decisions
+200	short memory
+201	borehole thermal energy storage
+202	clean energy system
+203	clean energy systems
+204	co 2 emission
+205	energy cost
+206	geothermal energy
+207	multi-objective optimization
+208	multi-objectives optimization
+209	optimal control framework
+210	optimal control frameworks
+211	residential building
+212	ventilation airs
+213	waste heat
+214	waste heat utilization
+215	wastewater heat recovery
+216	carbon dioxide
+217	electric utilities
+218	integrated control
+219	integrated systems
+220	molten salt
+221	multilayer neural networks
+222	optimization algorithms
+223	percentage deviation
+224	performance prediction
+225	renewable sources
+226	supercritical co 2
+227	supercritical co2 brayton cycle
+228	supercritical co<sub>2</sub> brayton cycle
+229	wind farm
+230	detection accuracy
+231	electric power system protection
+232	empirical wavelet transform
+233	empirical wavelet transform (ewt)
+234	fault detection
+235	linear signals
+236	non linear
+237	non-linear signal
+238	non-linear signals
+239	pelican optimization algorithm
+240	recurrent neural networks
+241	signal decomposing
+242	signal processing
+243	solar photovoltaic
+244	solar photovoltaics
+245	wavelet transforms
+246	wavelets transform
+247	artificial intelligence technologies
+248	data handling
+249	digital twins
+250	e-learning
+251	energy evaluation
+252	energy systems
+253	forestry
+254	lstm
+255	solar and wind energies
+256	accuracy assessment
+257	ahead-time
+258	biogas
+259	combined-heat and power
+260	day-ahead
+261	energy hub
+262	energy hubs
+263	energy management
+264	energy management system
+265	energy management systems
+266	energy resource
+267	heat production
+268	learning
+269	natural gas
+270	nonlinearity
+271	optimal energy
+272	power generation
+273	real time
+274	reinforcement learnings
+275	resource management
+276	sensitivity analysis
+277	tariff structure
+278	uncertainty analysis
+279	computing power
+280	cooperative optimization
+281	d3qn
+282	data center system
+283	data center systems
+284	decomposition networks
+285	electric power utilization
+286	emission control
+287	global cooperative optimization
+288	global optimisation
+289	global optimization
+290	green computing
+291	multi agent systems
+292	systems operation
+293	value decomposition
+294	value decomposition network
+295	vdn
+296	battery management systems
+297	circuit simulation
+298	equivalent circuit model
+299	equivalent circuits
+300	info algorithm
+301	ions
+302	lithium-ion batteries
+303	lithium-ion battery
+304	modeling parameters
+305	optimizers
+306	parameter estimation
+307	parameters estimation
+308	parameters extraction
+309	timing circuits
+310	vector algorithms
+311	vectors
+312	weighted mean
+313	artificial intelligence (ai)
+314	energy policy
+315	food production
+316	global urbanization
+317	metabolism
+318	nexus optimization
+319	solar radiation
+320	sustainable development
+321	taipei
+322	taiwan
+323	urban area
+324	urban metabolism
+325	urban metabolisms
+326	urban sustainability
+327	urbanization
+328	water energy
+329	water supply
+330	water-energy-food
+331	water-energy-food (wef)
+332	c++ (programming language)
+333	combinatorial optimization
+334	computer software
+335	digital storage
+336	domestic appliances
+337	electric power transmission networks
+338	energy supplies
+339	load switching
+340	off-grids
+341	operating state
+342	power load
+343	power quality
+344	quality control
+345	scheduling
+346	switching time
+347	weather data
+348	battery energy storage systems
+349	battery storage
+350	benchmarking
+351	coordinated scheduling
+352	decision mechanism
+353	distributed power generation
+354	distribution operations
+355	distribution planning and operation
+356	dynamics
+357	electric batteries
+358	electric power transmission
+359	electricity prices
+360	microturbines
+361	renewables
+362	renewables and storage
+363	beluga whales
+364	bio-inspired algorithm
+365	bio-inspired algorithms
+366	brain
+367	electric load forecasting
+368	electric power plant loads
+369	features extraction
+370	hyper-parameter optimizations
+371	hyperparameter optimization
+372	load forecasting
+373	load modeling
+374	prediction algorithms
+375	predictive models
+376	short term prediction
+377	short-term prediction
+378	usability
+379	annual energy costs
+380	architectural design
+381	battery banks
+382	binary trees
+383	building construction
+384	building systems
+385	correlation methods
+386	distributed generation
+387	distributed generation system
+388	electric power factor
+389	investments
+390	k-means clustering
+391	net zero energy cost building
+392	net zero energy cost building (nzecb)
+393	planning problem
+394	structural optimization
+395	cost benefit analysis
+396	economic analysis
+397	electric energy storage
+398	electricity consumptions
+399	electricity-consumption
+400	energy-consumption
+401	green products
+402	led
+403	light emitting diodes
+404	lithium batteries
+405	optimization algorithm
+406	optimization method
+407	pedestrian
+408	photoelectrochemical cells
+409	photovoltaic
+410	photovoltaic (pv)
+411	photovoltaic systems
+412	storage
+413	streetlamp
+414	technical-economic analysis
+415	technology managements
+416	costs
+417	dam
+418	dams
+419	decision support system
+420	decision support systems
+421	energy production sector
+422	hydroelectric power
+423	hydroelectric power plants
+424	hydropower plants
+425	interconnected dam
+426	interconnected dams
+427	milp
+428	numerical model
+429	operational decision making
+430	optimisation
+431	portugal
+432	profitability
+433	relax and fixes
+434	relax-and-fix
+435	watershed
+436	watershed system
+437	watersheds
+438	accuracy
+439	adaptive boosting
+440	bayesian optimization
+441	charged particles
+442	classification (of information)
+443	ensemble of tree
+444	ensemble of trees
+445	hyper-parameter
+446	hyperparameter tuning
+447	lsboost
+448	power forecasting
+449	surface inclination angle
+450	tuning
+451	battery energy storage system
+452	battery energy storage systems (besss)
+453	charge storage
+454	electric power system stability
+455	energy management system (ems)
+456	grid stability
+457	hydrogen energy storage system
+458	hydrogen energy storage systems (hesss)
+459	hydrogen energy storages
+460	hydrogen storage
+461	information management
+462	management systems
+463	matlab
+464	renewable energy integration
+465	renewable energy integrations
+466	simulation
+467	storage systems
+468	critical component
+469	critical design
+470	data acquisition
+471	digital system
+472	digital twin
+473	physical systems
+474	rotor blades
+475	service systems
+476	system failures
+477	wind energy
+478	wind turbine
+479	wind turbines
+480	wireless sensor networks
+481	budget control
+482	competitive intelligence
+483	convex optimization
+484	customer satisfaction
+485	decision-making
+486	dynamic frequency scaling
+487	dynamic programming
+488	empowerment of personnel
+489	energy management strategy
+490	enterprise resource planning
+491	hybrid optimization
+492	hybrid optimization of multiple energy resource
+493	hybrid optimization of multiple energy resources
+494	industrial relations
+495	industrial waste disposal
+496	industrial waste treatment
+497	input output programs
+498	job analysis
+499	lean production
+500	management strategies
+501	markup languages
+502	nuclear batteries
+503	phosphate deposits
+504	photovoltaic panel
+505	photovoltaic panels
+506	power management (telecommunication)
+507	product development
+508	quality of service
+509	refuse digestion
+510	reliable
+511	resource allocation
+512	risk management
+513	sales
+514	six sigma
+515	sizing
+516	strategic planning
+517	switch
+518	taxation
+519	total quality management
+520	virtual storage
+521	voltage scaling
+522	water treatment
+523	boiler efficiency
+524	boilers
+525	control fields
+526	curve fitting
+527	demonstrations
+528	district energy systems
+529	district heating
+530	district heating system
+531	field demonstration
+532	heating
+533	integrate renewable energies
+534	model predictive control
+535	model-predictive control
+536	operations optimization
+537	predictive control systems
+538	statistical analysis
+539	3d modeling
+540	agent based
+541	digital technologies
+542	energy digitalization
+543	energy flexibility
+544	energy resilience
+545	energy-integration
+546	integration
+547	intelligent buildings
+548	internet of energy
+549	multi agent
+550	power management
+551	smart city
+552	stochastic systems
+553	three dimensional computer graphics
+554	virtual reality
+555	distributed energy resources
+556	ensemble learning
+557	random forest
+558	deep reinforcement learning
+559	ferroelectric ram
+560	gas turbines
+561	markov processes
+562	micro grids
+563	power distribution lines
+564	power fluctuations
+565	power generation scheduling
+566	power system stability
+567	power systems stability
+568	renewable and storage
+569	scheduling strategies
+570	stochastic models
+571	vehicle to grids
+572	vehicle-to-grid
+573	algorithm dynamics
+574	big data
+575	carbon emissions
+576	composite modelling
+577	data envelopment analysis
+578	dynamic fuzzy systems
+579	economic and social effects
+580	energy demand
+581	environmental management
+582	errors
+583	harmony search algorithms
+584	industrial economics
+585	industrial emissions
+586	industrial research
+587	low carbon economy
+588	low carbon energies
+589	low-carbon economy
+590	low-carbon energy
+591	mean square error
+592	multi-universe quantum harmony search-algorithm dynamic fuzzy system ensemble composite model
+593	muqhs-dmfse composite model
+594	power supply
+595	resource supply
+596	ant colony optimization
+597	emission optimization
+598	emissions optimization
+599	energy allocations
+600	energy use
+601	governance approach
+602	hydrogen production
+603	landscape
+604	operational cost
+605	paradigm shifts
+606	urban economy
+607	urban energy
+608	urban energy transition
+609	urban energy transitions
+610	% reductions
+611	building integrated
+612	building integrated energy
+613	commercial building
+614	cost reduction
+615	economic dispatch
+616	hybrid energy storage
+617	hybrid energy system
+618	life cycle
+619	office buildings
+620	demand response
+621	generation technologies
+622	grid-connected
+623	linear systems
+624	non linear system
+625	resource availability
+626	storage technology
+627	ant colony optimization algorithms
+628	consumer’s cost of energy
+629	cost of energies
+630	demand side management
+631	evolutionary algorithms
+632	fossil fuel power plants
+633	fossil fuels
+634	housing
+635	minimization problems
+636	peak load
+637	residential loads
+638	solar concentrators
+639	solar photovoltaic energies
+640	solar photovoltaic energy
+641	utility peak load
+642	algorithm
+643	carbon emission
+644	dsm
+645	electric loads
+646	energy market
+647	environmental economics
+648	hba
+649	hems
+650	honey badger algorithm
+651	iaroa
+652	improved artificial rabbit optimization algorithm
+653	whale optimization algorithm
+654	woa
+655	wt
+656	adaptive control systems
+657	adaptive neural fuzzy inference system
+658	artificial neural network
+659	computational fluid dynamics
+660	fuzzy logic controller
+661	fuzzy logic controllers
+662	maximum power point
+663	mppt
+664	neural fuzzy inference systems
+665	solar panels
+666	three term control systems
+667	tracking approaches
+668	artificial intelligence based optimization technique
+669	artificial intelligence based optimization techniques
+670	eco-friendly
+671	optimization techniques
+672	power- generations
+673	uncertainty
+674	voltage regulators
+675	energy operation
+676	energy operations
+677	grid efficiency
+678	grid infrastructures
+679	grid reliability
+680	shortage economy
+681	smart grids
+682	automation
+683	cost effectiveness
+684	desalination
+685	fuel storage
+686	humidity control
+687	neural network model
+688	neural network modelling
+689	process control
+690	process control sustainable energy and water desalination
+691	remote regions
+692	solar/wind
+693	sustainable water
+694	water conservation
+695	water desalination
+696	water filtration
+697	field programmable gate array
+698	field programmable gate arrays (fpga)
+699	field programmables
+700	field-programmable gate array (fpga)
+701	logic devices
+702	microcontrollers
+703	operating costs
+704	operation and management
+705	optimal management
+706	optimal operation
+707	optimal operation and management
+708	programmable gate array
+709	renewable generation
+710	cloud-fog computing
+711	computing frameworks
+712	fog computing
+713	microgrid systems
+714	multi micro-grids
+715	optimality
+716	uncertainties
+717	artificial intelligence-generated configuration
+718	artificial intelligence-generated configurations
+719	automated machine learning
+720	automated machines
+721	conversion efficiency
+722	esters
+723	high-throughput
+724	inverse designs
+725	light management
+726	organic solar cells
+727	power conversion efficiencies
+728	solar cell devices
+729	modeling and optimization
+730	new type power system
+731	power
+732	power systems computer aided design
+733	power systems optimizations
+734	system construction
+735	active distributions
+736	deep convolutional neural network
+737	failure analysis
+738	faults diagnosis
+739	firefly algorithms
+740	multi objective
+741	multilayer perceptron
+742	multilayers perceptrons
+743	multiobjective firefly algorithm
+744	phasor measurement units
+745	stockwell transform
+746	time domain analysis
+747	biological system modeling
+748	computational modelling
+749	data center micro-grid
+750	datacenter
+751	delay tolerant
+752	delay-tolerant workload
+753	delay-tolerant workloads
+754	regulation
+755	task analysis
+756	time shift
+757	time shifts
+758	cchp system
+759	cooling
+760	integrated thermal process
+761	levelized costs
+762	organics
+763	payback time
+764	rankine cycle
+765	thermal model
+766	thermal modeling
+767	thermal process
+768	distributed ai
+769	distributed artificial intelligence
+770	distributed power
+771	distributed power load
+772	distributed power loads
+773	distributed power sources
+774	electric load flow
+775	environmental impact
+776	fluctuation
+777	generator
+778	linear programming
+779	load flow
+780	power balance
+781	power control
+782	power grids
+783	power-control
+784	consumer electronics
+785	consumer-centric
+786	consumer-centric technology
+787	data models
+788	electric vehicle charging
+789	electric vehicle energy use
+790	electric vehicles
+791	energy consumption
+792	generative adversarial network
+793	generative adversarial networks
+794	higher order statistics
+795	interpretability
+796	learning algorithms
+797	planning
+798	shapley
+799	shapley additive explanation
+800	shapley additive explanations
+801	urban areas
+802	urban planning
+803	urban transportation
+804	vehicle energy
+805	consumer devices
+806	energy distribution
+807	industrial internet of thing
+808	intelligent decision support system
+809	intelligent decision-support systems
+810	privacy preserving
+811	privacy-preserving techniques
+812	quantum computers
+813	quantum computing
+814	security
+815	trust management
+816	artificial gorilla troop optimizer
+817	artificial gorilla troops optimizer (gto)
+818	backup systems
+819	optimal systems
+820	turbulent flow of water-based optimization
+821	turbulent flow of water-based optimization (tfwo)
+822	vehicle to grid (v2g)
+823	vehicle-to-grid (v2g)
+824	water based
+825	advanced driver assistance systems
+826	automobile drivers
+827	behavioral research
+828	behavioral science
+829	charging satisfaction
+830	driver behavior
+831	driver's behavior
+832	electric vehicle
+833	computational thinking
+834	computational thinkings
+835	diffusion in liquids
+836	educational innovation
+837	educational innovations
+838	ejector refrigeration systems
+839	energy security
+840	genetic algorithm optimization
+841	genetic-algorithm optimizations
+842	high educations
+843	higher education
+844	life long learning
+845	lifelong learning
+846	air conditioning
+847	conditioning systems
+848	energy  savings
+849	energy saving
+850	energy-savings
+851	fridge control
+852	heating ventilation and air conditioning
+853	total energy
+854	tropical countries
+855	tropics
+856	bridge circuits
+857	dual active bridge (dab)
+858	dual active bridges
+859	extended phase shift (eps) modulation
+860	extended phase shift modulation
+861	extreme gradient boosting (xgboost)
+862	hybrid modulation
+863	hybrid modulation (hm)
+864	particle swarm
+865	particle swarm optimization
+866	phase shift modulation
+867	power-electronics
+868	xgboost
+869	zero voltage switching
+870	zero voltage switching (zvs)
+871	zero- voltage switching
+872	carbon footprint
+873	carbon reduction
+874	computational modeling
+875	electronic industries
+876	electronics industry
+877	environmental factor manufacturing
+878	environmental factors
+879	environmental factors manufacturing
+880	fabrication
+881	hardware
+882	manufacturing
+883	net zero
+884	numerical simulation
+885	research and development
+886	semiconductor device manufacture
+887	semiconductor materials
+888	silicon wafers
+889	accident prevention
+890	computation theory
+891	computational methods
+892	digital technologies in energy sector
+893	digital technology in energy sector
+894	digital transformation
+895	distributed energy resource
+896	distributed energy resources (der)
+897	energy forecasting
+898	energy sector
+899	energy storage system
+900	machine learning (ml)
+901	metadata
+902	power markets
+903	battery-based energy storage system
+904	heuristic methods
+905	image enhancement
+906	losses
+907	optimum power matching
+908	photo voltaic
+909	power matching
+910	power quality improvement
+911	quality issues
+912	renewable energy system
+913	renewable energy systems
+914	ai
+915	data driven
+916	data-driven
+917	enriched fuels
+918	gases
+919	hydrogen-enriched fuel
+920	micro gas turbine
+921	micro-gas
+922	operation optimization
+923	power sources
+924	standby power systems
+925	turbine operation
+926	hierarchical load forecasting
+927	mixed-integer linear programming
+928	temporal convolutional networks
+929	control
+930	environment
+931	hybrid systems
+932	power system reliability
+933	reliability
+934	resources utilizations
+935	batteries
+936	energy efficient material
+937	gaussian regression
+938	ml tool
+939	solar cell
+940	ad-hoc networks
+941	charging station
+942	fitness
+943	grading
+944	remaining energies
+945	scheduling schemes
+946	smart decision-hunting optimization
+947	smart decision-hunting optimization (sdho)
+948	vehicular ad hoc networks
+949	vehicular adhoc network
+950	archimedes screws
+951	canal
+952	canals
+953	computer simulation
+954	drop structures
+955	economics analysis
+956	environmental analysis
+957	hec-ras
+958	holistic approach
+959	holistic frameworks
+960	hydraulic structures
+961	irrigation
+962	irrigation canals
+963	modernization
+964	scanning electron microscopy
+965	screw
+966	screws
+967	water management
+968	water supply systems
+969	waters managements
+970	clean energy
+971	combustion chambers
+972	condition
+973	exergy
+974	fresh water production
+975	hybridisation
+976	hydrogen
+977	med
+978	pv panel
+979	renewable hybridization
+980	steam generators
+981	waste incineration
+982	ac motors
+983	adjustment parameter
+984	adjustment parameter enhanced aquila
+985	bldc motor
+986	brushless dc motors
+987	brushless dc-motors
+988	dc-dc converters
+989	output voltages
+990	photovoltaic system
+991	pi controller
+992	super lift luo converter
+993	wind energy system
+994	wind energy systems
+995	wind systems
+996	carbon credit
+997	carbon credits
+998	conditioning process
+999	hydrogen distribution systems
+1000	hydrogen refueling stations
+1001	hydrogen supply chain
+1002	hydrogen supply chains
+1003	life-cycle assessment
+1004	mathematical programming
+1005	multi-agent reinforcement learning
+1006	production process
+1007	robot programming
+1008	supply chains
+1009	supply-chain designs
+1010	techno-economic analysis
+1011	building simulation
+1012	cost optimization
+1013	costs optimization
+1014	geothermal fields
+1015	geothermal heat pumps
+1016	heat pumps
+1017	heat storage
+1018	optimized designs
+1019	pumps
+1020	solar assisted
+1021	system components
+1022	systems performance
+1023	thermal storage
+1024	collaborative control
+1025	computer architecture
+1026	electric power system security
+1027	human-machine
+1028	human-machine collaborative control
+1029	human-machine hybrid intelligence
+1030	hybrid intelligence
+1031	optimization and evolution
+1032	power grid dispatching
+1033	power grid dispatching and control
+1034	cost
+1035	environmental impacts
+1036	heuristic algorithms
+1037	hres
+1038	hybrid renewable energies
+1039	hybrid renewable energy system
+1040	natural energy sources
+1041	optimisation techniques
+1042	data privacy
+1043	decentralized learning
+1044	environmental challenges
+1045	environmental sustainability
+1046	federated lstm
+1047	intelligent optimization
+1048	memory modeling
+1049	short term memory
+1050	cloud cover
+1051	meteorological parameters
+1052	meteorology
+1053	photovoltaic power
+1054	power predictions
+1055	solar photovoltaic power
+1056	uv index (uvi)
+1057	weather forecasting
+1058	computation complexity
+1059	deep belief neural network
+1060	feed forward neural network
+1061	backpropagation
+1062	building integrated photovoltaic
+1063	building integrated photovoltaic thermal system
+1064	cost effective technology
+1065	cost-effective technology
+1066	economic performance
+1067	multi-objective performance optimization
+1068	multi-objective performance optimizations
+1069	nsga-ii
+1070	photovoltaic/thermal systems
+1071	thermal plants
+1072	total efficiency
+1073	clusterings
+1074	domestic resources
+1075	energy independence
+1076	microgrid cluster
+1077	power line
+1078	prediction
+1079	virtual modeling
+1080	virtual models
+1081	block-chain
+1082	blockchain
+1083	energy purchase
+1084	profit distributions
+1085	purchase cost
+1086	smart contract
+1087	storage management
+1088	virtual power plant
+1089	virtual power plants
+1090	artificial intelligence and data analytic
+1091	artificial intelligence and data analytics
+1092	battery storage plants
+1093	cost functions
+1094	data analytics
+1095	energy trading
+1096	microgrid, nanogrid, and peer-to-peer energy trading
+1097	nanogrids
+1098	peer to peer
+1099	photovoltaic power systems
+1100	quadratic programming
+1101	binomial network
+1102	contrastive learning
+1103	differential learning deep learning
+1104	micro off-grid
+1105	modular differential
+1106	prediction models
+1107	prediction statistic
+1108	prediction statistics
+1109	probability statistic
+1110	statistic modeling
+1111	user need
+1112	artificial intelligence algorithms
+1113	chemical engineering process
+1114	chemical process
+1115	data integration
+1116	hybrid model
+1117	hybrid modeling
+1118	integrating process
+1119	optimized process
+1120	process mechanisms
+1121	transparent chemical engineering process
+1122	artificial-intelligence
+1123	metaheuristic algorithms
+1124	optimal placement
+1125	review
+1126	carbon dioxide emissions
+1127	demand and response management
+1128	fact
+1129	facts
+1130	flexible ac transmission systems
+1131	global warming
+1132	high voltage transmission
+1133	high voltage transmissions
+1134	power flow control
+1135	power flow controls
+1136	regional cooperation
+1137	response management
+1138	saarc
+1139	south asian association for regional cooperation
+1140	super smart grid
+1141	artificial neural network (ann)
+1142	effective management
+1143	evolution of cub to predator
+1144	evolution of cub to predator (ecp)
+1145	feed forward back propagation
+1146	feed forward back propagation (ffbn)
+1147	feedforward backpropagation
+1148	stand-alone pv systems
+1149	anomaly detection
+1150	battery management system
+1151	battery systems
+1152	cloud computing
+1153	cloud-based
+1154	cloud-based solution
+1155	cloud-based solutions
+1156	cloud-computing
+1157	effective energy
+1158	state of charge
+1159	state of health
+1160	states of charges
+1161	conversion systems
+1162	dc-microgrid renewable energies
+1163	dc-microgrid renewable energy
+1164	electricity conversion system
+1165	electricity storage system
+1166	electricity storage systems
+1167	energy flow
+1168	fuzzy approach
+1169	fuzzy sets
+1170	lead acid batteries
+1171	software/hardware
+1172	design optimization
+1173	design optimization energy system performance prediction and thermal energy storage control
+1174	design optimization energy systems performance prediction and tes control
+1175	energy conversion systems
+1176	energy conversion/systems
+1177	energy storage systems
+1178	storage control
+1179	thermal energy
+1180	thermal energy storage
+1181	ant colony optimization algorithm tuned super-twisting sliding mode controller
+1182	dynamic energy pricing
+1183	electric power supplies to apparatus
+1184	energy balance
+1185	energy balancing
+1186	energy-balancing
+1187	sliding mode controller
+1188	smart power grid
+1189	super- twisting
+1190	bess
+1191	ems
+1192	peak shaving
+1193	peak-shaving
+1194	ppo
+1195	price arbitrage
+1196	bat algorithms
+1197	economic load dispatch
+1198	economic-emission dispatch
+1199	fog
+1200	gradient methods
+1201	integrated economic emission dispatch
+1202	mayfly
+1203	moth-flame optimization
+1204	artificial intelligence in energy system
+1205	artificial intelligence in energy systems
+1206	deep learning application in renewable energy
+1207	deep learning applications in renewable energy
+1208	humidifier technology
+1209	membranes
+1210	neural network models
+1211	optimization with genetic algorithm
+1212	optimization with genetic algorithms
+1213	pervaporation membranes
+1214	proton exchange membrane fuel cells
+1215	proton exchange membrane fuel cells (pemfc)
+1216	proton-exchange membranes fuel cells
+1217	reverse osmosis membrane
+1218	covid-19
+1219	energy issue in technology management
+1220	energy issues
+1221	energy issues in technology management
+1222	energy storage unit
+1223	scheduling models
+1224	battery swapping
+1225	charging infrastructures
+1226	electric vehicle (ev)
+1227	electro mobilities
+1228	electro-mobility (e-mobility)
+1229	europe
+1230	inductive charging
+1231	service optimization
+1232	transportation electrification
+1233	transportation electrifications
+1234	bidirectional lstm
+1235	explainable artificial intelligence
+1236	feature selection
+1237	wind speed forecasting
+1238	business practices
+1239	carbon cost reduction
+1240	carbon costs
+1241	corporate social responsibility
+1242	costs reduction
+1243	spss
+1244	gearbox systems
+1245	gears
+1246	high impedance fault detection
+1247	line protection
+1248	optimal transient extracting transform
+1249	optimization technique
+1250	signal decomposition
+1251	signal distortion
+1252	switching event
+1253	switching events
+1254	system grounding
+1255	fuzzy control
+1256	photovoltaic cells
+1257	intelligence models
+1258	optimal power dispatch
+1259	optimization scheme
+1260	renewable energy penetration
+1261	renewable energy penetrations
+1262	scientific community
+1263	system stability
+1264	trilayered neural network
+1265	use of renewable energies
+1266	article
+1267	conductive materials
+1268	dielectric materials
+1269	drug development
+1270	fossil fuel
+1271	harvesting energies
+1272	intelligent systems
+1273	mechanical excitations
+1274	nanogenerators
+1275	physic-informed artificial intelligence
+1276	physics
+1277	physics-informed artificial intelligence
+1278	principal component analysis
+1279	strategic inverse design
+1280	sustainable energy sources
+1281	triboelectric nanogenerator
+1282	triboelectric nanogenerators
+1283	triboelectricity
+1284	triboelectrification
+1285	gradient boosting
+1286	gradient boosting regressor
+1287	gray wolves
+1288	invelox wind turbine
+1289	renewable production
+1290	simulation data
+1291	simulation/data-driven prediction
+1292	active distribution network
+1293	bilevel programming model
+1294	bilevel programming models
+1295	hierarchical scheduling
+1296	improved ant colony algorithm
+1297	multi-microgrid system
+1298	scheduling algorithms
+1299	ant colonies algorithm
+1300	ant colony algorithm
+1301	decision theory
+1302	distributed generation units
+1303	igdt
+1304	information gap decision theory
+1305	information-gap
+1306	multipurpose stochastic optimization
+1307	solar cells
+1308	stochastic optimizations
+1309	ancillary service
+1310	arbitrage
+1311	day-ahead market
+1312	electric systems
+1313	expert systems
+1314	intermittent energy source
+1315	large-scale power plants
+1316	maximum profits
+1317	particle swarm optimisation
+1318	power system management
+1319	supply and demand
+1320	absorption refrigeration
+1321	ammonia
+1322	cooling systems
+1323	data-driven model
+1324	data-driven models
+1325	decision-making process
+1326	evaporators
+1327	generator-absorber heat exchange (gax)
+1328	heat exchangers
+1329	heat-exchange
+1330	pawn method
+1331	refrigeration cycles
+1332	solar refrigeration cycle
+1333	temperature
+1334	coot algorithm
+1335	random forest method
+1336	solar power
+1337	artificial neural network (ann) algorithm
+1338	artificial neural network algorithm
+1339	cmcmac protocol
+1340	cross layer
+1341	cross-layer multi-channel mac protocol
+1342	dc/dc converter
+1343	embedded systems
+1344	maximum power point tracking controller
+1345	mppt controller
+1346	multi-channel mac protocols
+1347	smart grid (sg)
+1348	tracking controller
+1349	zigbee
+1350	zigbee communication
+1351	advanced analysis
+1352	analysis tools
+1353	boundary condition
+1354	complex task
+1355	decarbonisation
+1356	decarbonization
+1357	electric industry
+1358	electrical power
+1359	electricity mix
+1360	electricity mixes
+1361	greenhouse gas emissions
+1362	methodology
+1363	power sector
+1364	renewable energy applications
+1365	spain
+1366	activated sludge
+1367	alkalines
+1368	anaerobic digestion
+1369	analysis of variance
+1370	back propagation
+1371	based modelling
+1372	biomethane
+1373	biowastes
+1374	carbohydrate
+1375	electrolysis
+1376	electrolytic cells
+1377	mean squared error
+1378	microbial electrolyse cell-assisted anerobic digestion
+1379	microbial electrolysis cell-assisted anaerobic digestion
+1380	microbial fuel cells
+1381	modeling
+1382	molecular biology
+1383	nerve cell
+1384	network layers
+1385	nonhuman
+1386	pre-treated wastes
+1387	process optimization
+1388	regenerative fuel cells
+1389	response surface method
+1390	response variable
+1391	sludge digestion
+1392	waste activated sludges
+1393	waste management
+1394	waste water management
+1395	waste-activated sludge
+1396	wastewater treatment
+1397	workflow
+1398	artificial intelligence methods
+1399	boost converter
+1400	discrete-time control
+1401	equations of state
+1402	gain scheduling techniques
+1403	gain-scheduling
+1404	inverse optimal control
+1405	inverse problems
+1406	inverse-optimal control
+1407	lyapunov functions
+1408	nonlinear control systems
+1409	operation conditions
+1410	reference voltages
+1411	robust control
+1412	robust optimal control
+1413	stability analysis
+1414	anomaly
+1415	associative processing
+1416	classification datasets
+1417	data imbalance
+1418	electrical load
+1419	hyperdimensional computing
+1420	imbalanced classification
+1421	monitoring system
+1422	power-distribution system
+1423	pre-processing optimisation
+1424	real-time detection
+1425	signal detection
+1426	tanzania
+1427	village
+1428	control costs
+1429	electric load shedding
+1430	emergency load shedding
+1431	extended equal area criterion
+1432	extended equal-area criterion
+1433	instability
+1434	load-shedding
+1435	real- time
+1436	risk averse
+1437	risk factor
+1438	risk-averse learning
+1439	transients
+1440	complex energy systems
+1441	computational burden
+1442	gas turbine
+1443	numerical methods
+1444	operation strategy
+1445	physics-based models
+1446	ant colonies
+1447	ant colony
+1448	electric control equipment
+1449	fopid
+1450	fraction-al-order proportional-integral-derivative
+1451	frequency stability
+1452	inertial controls
+1453	microgrid stability
+1454	operating condition
+1455	pid
+1456	propor-tional-integral-derivative
+1457	proportional control systems
+1458	proportional integral derivatives
+1459	stability
+1460	two term control systems
+1461	virtual inertial control
+1462	correlation analysis
+1463	intermittency
+1464	prediction performance
+1465	prediction technologies
+1466	prediction uncertainty
+1467	predictive analytics
+1468	recurrent neural network (rnn)
+1469	variable renewable energies
+1470	variable renewable energy
+1471	ant colony optimizer algorithm
+1472	ant colony optimizer algorithms
+1473	economic optimization
+1474	harmony search
+1475	installation
+1476	jaya algorithm
+1477	jaya algorithms
+1478	load demand
+1479	techno-economic optimization
+1480	techno-economics
+1481	evolutionary algorithm
+1482	buildings
+1483	direct contact
+1484	educational spaces
+1485	heating and cooling
+1486	in-buildings
+1487	louver
+1488	louvre
+1489	technical specifications
+1490	and grid connected res
+1491	electric inverters
+1492	energy converters
+1493	innovative power control
+1494	input datas
+1495	output data
+1496	renewable power
+1497	simulink
+1498	building management system
+1499	building management systems
+1500	commerce
+1501	data analytic and machine learning
+1502	data analytics and machine learning
+1503	data structures
+1504	distributed computer systems
+1505	distributed energies
+1506	intelligent agents
+1507	knowledge management
+1508	legacy systems
+1509	p2p model
+1510	back-to-back vscs
+1511	control strategies
+1512	emergency control
+1513	hvdc power transmission
+1514	network topology
+1515	policy optimization
+1516	proximal policy optimization
+1517	reinforcement learning algorithms
+1518	remedial action scheme
+1519	remedial action schemes
+1520	vsc-hvdc
+1521	means square errors
+1522	metaheuristic
+1523	metaheuristic optimization
+1524	multivariate time series
+1525	swarm intelligence
+1526	time series
+1527	artificial intelligent
+1528	control strategy
+1529	electric power systems
+1530	energy storage technologies
+1531	hybrid energy storage system
+1532	hybrid energy storage systems
+1533	optimisation and state estimation
+1534	optimization and state estimation
+1535	system energy
+1536	battery management system (bms)
+1537	renewable energy sources (res)
+1538	solar photovoltaic (pv) systems
+1539	adaptive differential evolution (ade)
+1540	differential evolution (de)
+1541	differential evolution algorithms
+1542	economic assessment
+1543	economic competitiveness
+1544	electromagnetic wave emission
+1545	free energy
+1546	hybrid energy systems
+1547	integration of renewable energies
+1548	lifecycle cost
+1549	microreactors
+1550	nuclear energy
+1551	nuclear energy systems
+1552	nuclear reactors
+1553	ships
+1554	economic optimization operation
+1555	energy dispatch
+1556	environmental technology
+1557	low carbon
+1558	optimization operation
+1559	smart micro grids
+1560	smart microgrid
+1561	distribution network
+1562	optimal siz-ing
+1563	power sensitivity analysis

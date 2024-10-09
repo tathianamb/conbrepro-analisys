@@ -1,10 +1,17 @@
 import pandas as pd
-from wordcloud import WordCloud
 import plotly.graph_objects as go
 import re
 import matplotlib.colors as mcolors
+import matplotlib.pyplot as plt
 import seaborn as sns
+import nltk
+from nltk.corpus import stopwords
+import plotly.express as px
+import numpy as np
 
+
+nltk.download('punkt_tab')
+nltk.download('stopwords')
 
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
@@ -36,7 +43,7 @@ def top_institutions(df, top_n=10):
 
 
 def top_journals(df, top_n=10):
-    return df['T2'].value_counts().head(top_n)
+    return df['T2'].str.lower().value_counts().head(top_n)
 
 
 def top_countries(df, col='Country', top_n=15):
@@ -66,44 +73,81 @@ def most_frequent_keywords(df, top_n=10):
     return common_keywords
 
 
-def analyze_cooccurrence(df, column='AB'):
-    df['conjuntos_palavras'] = df['AB'].apply(lambda x: set(x.split()))
+import itertools
+from collections import Counter
+import networkx as nx
+def keywords_cooccurrence(df):
+    def ajustar_rotulo(rotulo):
+        palavras = rotulo.split()
+        if len(palavras) > 2:
+            return '\n'.join(palavras)  # Inserir quebra de linha entre as palavras
+        return rotulo
 
-    all_words = ' '.join([' '.join(conjunto) for conjunto in df['conjuntos_palavras']])
+    df['KW_list'] = df['KW'].str.lower().str.replace(r'[^a-z; ]', ' ', regex=True).str.replace(r'  ', ' ', regex=True).str.split(';')
+    df['KW_list'] = df['KW_list'].apply(
+        lambda lista: [palavra.strip() for palavra in lista] if isinstance(lista, list) else lista)
+    pares_coocorrentes = []
 
-    wordcloud = WordCloud(width=800, height=400, background_color='white', colormap='viridis',
-                          max_words=200, contour_color='steelblue').generate(all_words)
+    for palavras in df['KW_list']:
+        if isinstance(palavras, list):
+            pares = list(itertools.combinations(sorted(set(palavras)), 2))
+            pares_coocorrentes.extend(pares)
 
-    list_keys = list(wordcloud.words_.keys())
+    contagem_coocorrencias  = Counter(pares_coocorrentes).most_common(100)
 
-    df_all_words = pd.DataFrame(all_words.split(), columns=['Palavra'])
+    grafo = nx.Graph()
+    pesos_transformados = []
 
-    df_all_words_grouped = df_all_words.groupby('Palavra').count().reset_index()
+    for (palavra1, palavra2), peso in contagem_coocorrencias:
+        peso_transformado = np.sqrt(peso)
+        grafo.add_edge(palavra1, palavra2, weight=peso_transformado)
 
-    df_filtered = df_all_words_grouped[df_all_words_grouped['Palavra'].isin(list_keys)]
+    grau_nos = dict(grafo.degree())
+    node_size = [100 * grafo.degree(n) for n in grafo.nodes()]
+    maior_no = max(grafo.degree, key=lambda x: x[1])[0]
+    font_size_labels = {no: max(grau_nos[no] * 0.8, 10) for no in grafo.nodes()}
 
-    wordcloud.to_file('wordcloud_analyze_cooccurrence.png')
+    edges = grafo.edges(data=True)
+    colors = ["#3cbb75ff" for (u, v, d) in edges]
 
-    return df_filtered.sort_values('Palavra', ascending=False).head(20)
+    shells = [[maior_no], list(set(grafo.nodes()) - {maior_no})]
+    pos = nx.shell_layout(grafo, nlist=shells)
+    nx.draw_networkx_nodes(grafo, pos, node_size=node_size, node_color="#55c667ff", alpha=0.8)
+    nx.draw_networkx_edges(grafo, pos, width=[d['weight'] for (u, v, d) in edges], edge_color=colors, alpha=0.3)
+    for no, (x, y) in pos.items():
+        plt.text(x, y, s=ajustar_rotulo(no),
+                 horizontalalignment='center', verticalalignment='center',
+                 fontsize=font_size_labels[no])
+    plt.axis('off')
+    plt.show()
 
-def analyze_freq(df, column='AB'):
+def analyze_freq_treemap(df, column='AB'):
+    stop_words = set(stopwords.words('english'))
 
-    all_words = ' '.join(df[column].dropna().astype(str))
+    df['AB_set_filtered'] = df[column].str.findall(r'\b[a-zA-Z]+\b')
 
-    wordcloud = WordCloud(width=800, height=400, background_color='white', colormap='viridis',
-                          max_words=200, contour_color='steelblue').generate(all_words)
+    word_tokens = df['AB_set_filtered'].explode().to_list()
 
-    list_keys = list(wordcloud.words_.keys())
+    filtered_sentence = [w for w in word_tokens if w.lower() not in stop_words]
 
-    df_all_words = pd.DataFrame(all_words.split(), columns=['Palavra'])
+    df_all_words = pd.DataFrame(filtered_sentence, columns=['Palavra'])
 
-    df_all_words_grouped = df_all_words.groupby('Palavra').count().reset_index()
+    df_all_words_grouped = df_all_words.groupby('Palavra').agg({'Palavra': ['count']}).reset_index()
 
-    df_filtered = df_all_words_grouped[df_all_words_grouped['Palavra'].isin(list_keys)]
+    df_all_words_grouped.columns = ['Palavra', 'count']
 
-    wordcloud.to_file('wordcloud_analyze_freq.png')
+    df_all_words_grouped_top = df_all_words_grouped.sort_values('count', ascending=False).head(250)
+    fig = px.treemap(
+        df_all_words_grouped,
+        path=[px.Constant('Coocorrência de palavras do resumo'), df_all_words_grouped_top['Palavra']],
+        values=df_all_words_grouped_top['count'],
+        title='Treemap Simples de Palavras e contagem'
+    )
+    fig.update_traces(root_color="lightgrey")
+    fig.update_layout(margin=dict(t=50, l=25, r=25, b=25))
+    fig.show()
 
-    return df_filtered.sort_values('Palavra', ascending=False).head(20)
+    return df_all_words_grouped.sort_values('count', ascending=False).head(20)
 
 def wordtree(df, coluna_texto='AB', termo_central='system'):
 
@@ -125,10 +169,10 @@ def wordtree(df, coluna_texto='AB', termo_central='system'):
 
             if index > 0:
                 de.append(f"-1. {palavras[index - 1]}" if index > 0 else "-1. ")
-                para.append(f"+0. ")
+                para.append(f"+0. {palavras[index]}")
 
             if index < len(palavras) - 1:
-                de.append(f"+0. ")
+                de.append(f"+0. {palavras[index]}")
                 para.append(f"+1. {palavras[index + 1]}" if index < len(palavras) - 1 else "+1. ")
 
             if index < len(palavras) - 2:
@@ -173,25 +217,17 @@ def wordtree(df, coluna_texto='AB', termo_central='system'):
 
 
 def run_bibliometric_analysis(df):
-    print(f"\nPublications per year:\n{plot_publications_per_year(df)}", file=f)
+    #print(f"\nPublications per year:\n{plot_publications_per_year(df)}", file=f)
+    #print(f"\nTop Authors:\n{top_authors(df).to_string()}", file=f)
+    #print(f"\nTop Institutions:\n{top_institutions(df).to_string()}", file=f)
+    #print(f"\nTop Journals:\n{top_journals(df).to_string()}", file=f)
+    #print(f"\nTop Countries:\n{top_countries(df).to_string()}", file=f)
+    #print(f"\nMost Cited Papers:\n{most_cited_papers(df)[['AU', 'TI', 'PY', 'T2', 'DO', 'Num_Citacoes']].to_string()}", file=f)
+    #print(f"\nWord Frequency - Abstract:\n{analyze_freq_treemap(df, column='AB')}", file=f)
 
-    print(f"\nTop Authors:\n{top_authors(df).to_string()}", file=f)
-
-    print(f"\nTop Institutions:\n{top_institutions(df).to_string()}", file=f)
-
-    print(f"\nTop Journals:\n{top_journals(df).to_string()}", file=f)
-
-    print(f"\nTop Countries:\n{top_countries(df).to_string()}", file=f)
-
-    print(f"\nMost Cited Papers:\n{most_cited_papers(df)[['AU', 'TI', 'PY', 'T2', 'DO', 'Num_Citacoes']].to_string()}", file=f)
-
-    print(f"\nMost Frequent Keywords:\n{most_frequent_keywords(df, top_n=50).to_string()}", file=f)
-
-    print(f"\nAnalyze Cooccurrence:\n{analyze_cooccurrence(df)}", file=f)
-
-    print(f"\nAnalyze Frequency:\n{analyze_freq(df)}", file=f)
-
-    wordtree(most_cited_papers(df, 30), 'AB', termo_central='system')
+    #Figures
+    keywords_cooccurrence(df)
+    #wordtree(most_cited_papers(df, 30), 'AB', termo_central='energy')
 
 if __name__ == "__main__":
     df = pd.read_csv('all_data_prepared.csv')
