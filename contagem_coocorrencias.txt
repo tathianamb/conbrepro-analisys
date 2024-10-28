@@ -1,0 +1,30 @@
+(artificial intelligence/optimization): 82
+(artificial intelligence/renewable energy): 68
+(optimization/renewable energy): 56
+(artificial intelligence/renewable energy resources): 53
+(optimization/renewable energy sources): 47
+(artificial intelligence/renewable energy source): 43
+(artificial intelligence/renewable energies): 42
+(artificial intelligence/machine learning): 40
+(artificial intelligence/optimisations): 40
+(renewable energies/renewable energy): 39
+(algorithm/optimization): 32
+(renewable energy resources/renewable energy source): 29
+(artificial intelligence/particle swarm optimization pso): 27
+(optimisations/optimization): 27
+(artificial intelligence/microgrid): 26
+(machine learning/optimization): 26
+(artificial intelligence/smart power grids): 25
+(artificial intelligence/decision making): 24
+(artificial intelligence/energy management): 24
+(artificial intelligence/solar energy): 23
+(optimization/renewable energies): 23
+(optimization/renewable energy resources): 23
+(algorithm/artificial intelligence): 23
+(artificial intelligence/energy efficiency): 23
+(model/optimization): 23
+(energy management/optimization): 22
+(optimisations/renewable energy): 22
+(artificial intelligence/energy management systems): 22
+(management/optimization): 22
+(artificial intelligence/wind power): 21

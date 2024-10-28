@@ -46,8 +46,13 @@ def extrair_numero_citacoes(citacao):
         return int(match.group(1))
     return 0
 
-
 df = pd.read_csv('all_data.csv')
+
+df['DO'] = df['DO'].str.lower()
+
+print(f"Número de linhas antes: {df.shape[0]}")
+df = df.drop_duplicates(subset='DO')
+print(f"Número de linhas depois: {df.shape[0]}")
 
 df[['Institution', 'Country']] = df['AD'].apply(extract_institution_country).apply(pd.Series)
 
