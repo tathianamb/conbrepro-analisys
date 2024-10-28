@@ -4,23 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17da7324-e4f3-496b-8f61-36e6cf4370bb" name="Changes" comment="v3 of scientometric analysis">
-      <change afterPath="$PROJECT_DIR$/arvore_termos.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/contagem_coocorrencias.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/countries.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frases_termo_central.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/newplot.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pub_year.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wordcloud.png" afterDir="false" />
+    <list default="true" id="17da7324-e4f3-496b-8f61-36e6cf4370bb" name="Changes" comment="v4 of scientometric analysis">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/all_data_prepared.csv" beforeDir="false" afterPath="$PROJECT_DIR$/all_data_prepared.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coocorrencia_palavras.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/geomapcountries.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocess.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocess.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/publications_per_year.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/treemap.png" beforeDir="false" afterPath="$PROJECT_DIR$/treemap.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -492,7 +477,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728480400204</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="v4 of scientometric analysis">
+      <option name="closed" value="true" />
+      <created>1730078171227</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1730078171227</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -508,7 +501,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add statistical analysis files" />
     <MESSAGE value="add statistical analysis script" />
     <MESSAGE value="fix functions to save acf and pacf images" />
     <MESSAGE value="Atualiza análise estatística e processamento de séries temporais&#10;&#10;- Adiciona teste KPSS além do teste Dickey-Fuller para verificar estacionariedade.&#10;- Implementa decomposição sazonal das séries temporais.&#10;- Refatora funções de criação de imagens e adota estrutura mais modular.&#10;- Melhora configuração de logging e tratamento de warnings.&#10;- Atualiza o formato do arquivo de log para .log.&#10;- Adiciona tratamento de warnings específicos (InterpolationWarning).&#10;&#10;Principais mudanças:&#10;- Inclusão do teste KPSS para análise de estacionariedade.&#10;- Criação de imagens de decomposição sazonal.&#10;- Refatoração de funções para modularização e clareza.&#10;- Atualização de logging e tratamento de warnings." />
@@ -533,6 +525,7 @@
     <MESSAGE value="v1 of scientometric analysis" />
     <MESSAGE value="v2 of scientometric analysis" />
     <MESSAGE value="v3 of scientometric analysis" />
-    <option name="LAST_COMMIT_MESSAGE" value="v3 of scientometric analysis" />
+    <MESSAGE value="v4 of scientometric analysis" />
+    <option name="LAST_COMMIT_MESSAGE" value="v4 of scientometric analysis" />
   </component>
 </project>
